@@ -1,3 +1,7 @@
 Julieta Camara
 Julian Manrique 
+<<<<<<< HEAD
 Florencia Fuentes
+=======
+cintia deseff
+>>>>>>> 8451cf1c1fefb3041004cb4f12b6c912cc56c81f
