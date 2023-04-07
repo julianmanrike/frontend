@@ -8,6 +8,11 @@
   padding: 0;
 }
 
+.maps {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* main {
   padding: 1%;
 } */
