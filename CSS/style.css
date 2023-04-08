@@ -20,7 +20,7 @@ a {
 }
 
 /* ---------Navbar -----------*/
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,25 +31,27 @@ header{
 
 }
 
-#logo a{
+#logo a {
   font-family: 'Lexend Tera', sans-serif;
   font-weight: 700;
   transition: all 0.8s ease;
- 
+
 }
-#logo a:hover{
+
+#logo a:hover {
   font-size: 1.1rem;
   transition: all 0.8s ease;
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
-  
-  
+
+
 }
 
 header nav>* {
-  padding: 0.7rem ;
+  padding: 0.7rem;
   transition: all 1.5s ease;
 }
 
@@ -91,8 +93,8 @@ header nav>*:hover {
   object-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  
- 
+
+
 }
 
 .text-center {
@@ -150,7 +152,8 @@ header nav>*:hover {
   width: 800px;
 
 }
-.carrousel-autos{
+
+.carrousel-autos {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -164,12 +167,14 @@ header nav>*:hover {
   margin: 1rem 0;
   padding: 0 1rem 0 2.5rem;
 }
-.porques .porque{
+
+.porques .porque {
   width: 30%;
 }
+
 /* Footer */
 .footer {
-  
+
   background: #0c0c0c;
 
   text-align: center;
@@ -219,47 +224,47 @@ header nav>*:hover {
 
 /* ----------ACERCA DE NOSOTROS------------- */
 
-.mainAcerca{
-  margin-top:30px;
-  
+.mainAcerca {
+  margin-top: 30px;
+
 }
 
 /* .mainAcerca h1{
   font-size: 4rem;
   font-family: 'Lexend Tera', sans-serif;
 } */
-.mainAcerca h2{
+.mainAcerca h2 {
   font-size: 4rem;
 }
 
-.titulos{
-background-image: url(/img/acercade5.jpeg);
-background-position: top;
-background-repeat: none;
-background-size: cover;
-padding: 50px;
-background-attachment: fixed;
+.titulos {
+  background-image: url(/img/acercade5.jpeg);
+  background-position: top;
+  background-repeat: none;
+  background-size: cover;
+  padding: 50px;
+  background-attachment: fixed;
 }
 
-.p1{
-width: 50%;
-padding: 0 20px;
-font-weight: 700;
-text-align: right;
+.p1 {
+  width: 50%;
+  padding: 0 20px;
+  font-weight: 700;
+  text-align: right;
 
 }
 
-.descripcion1{
+.descripcion1 {
   height: 400px;
   background-image: url(/img/acercade4.jpg);
-  background-size:50% ;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: top right;
   padding: 50px 0;
 
 }
 
-.descripcion2{
+.descripcion2 {
   background-image: url(/img/acercade2.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -269,8 +274,8 @@ text-align: right;
 
 }
 
-.p2{
-  padding: 100px ;
+.p2 {
+  padding: 100px;
   margin: 0px auto 0px auto;
   width: 80%;
   font-size: 1.5rem;
@@ -278,68 +283,67 @@ text-align: right;
 
 }
 
-.descripcion3{
-  background-image:url(/img/acercade3.jpg) ;
-  background-size: 50%  ;
+.descripcion3 {
+  background-image: url(/img/acercade3.jpg);
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: top right;
   width: 100%;
   height: 400px;
 }
 
-.p3{
-  width:50%;
-  padding:50px 10px;
+.p3 {
+  width: 50%;
+  padding: 50px 10px;
 }
 
-.descripcion4{
-  background-image:url(/img/acercade6.jpg) ;
+.descripcion4 {
+  background-image: url(/img/acercade6.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  width:100%;
+  width: 100%;
 }
 
-.p4{
-  padding: 100px ;
+.p4 {
+  padding: 100px;
   margin: 0px auto 0px auto;
   width: 60%;
   font-size: 2rem;
-  
+
   background-color: #bbbbbb5a;
 
 }
 
-.descripcion5{
-  background-image:url(/img/acercade1.webp) ;
+.descripcion5 {
+  background-image: url(/img/acercade1.webp);
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-position: top;
   background-size: cover;
-  width:100%;
+  width: 100%;
 
 }
 
-.p5{
-  padding: 100px ;
+.p5 {
+  padding: 100px;
   margin: 0px auto 0px auto;
   width: 80%;
   font-size: 2rem;
-  
+
   background-color: #bbbbbb5a;
 
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ----------- Sucursales ----------- */
+.directions {
+  display: flex;
+  justify-content: space-around;
+}
+.maps {
+  display: flex;
+  justify-content: space-around;
+}
 
 
 /* -----------media querys----------- */
@@ -369,76 +373,77 @@ text-align: right;
     margin: 0.5rem 0.3rem;
   }
 
-  .splash{
+  .splash {
     height: 300px;
-    
+
   }
 
 
 }
 
 @media screen and (max-width: 780px) {
-  .splash{
+  .splash {
     height: 400px;
-    
+
   }
 
 
-  .descripcion1{
+  .descripcion1 {
     background-image: none;
     height: auto;
   }
-  .p1{
+
+  .p1 {
     width: 80%;
-    padding: 50px ;
+    padding: 50px;
     font-weight: 700;
     text-align: left;
-    
-    
-    }
 
-    .p2{
-      padding: 100px ;
-      margin: 20px auto;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: 700;;
-      background-color: #bbbbbb9a;
-      
-    }
-    .descripcion3{
-      background-image:none ;
-    }
 
-    .p3{
-      width:100%;
-      text-align: end;
-      padding:  20px;
-    }
-
-    .p4{
-      padding: 100px ;
-      margin: 0 auto;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: 700;
-      background-color: #bbbbbb00;
-      color: #e7e2e2;
-    }
-    .p5{
-      padding: 100px ;
-      margin: 0px auto;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: 700;
-      background-color: #bbbbbb92;
-      
-    }
   }
 
- 
-  
-  @media screen and (max-width: 1080px) {
-    
+  .p2 {
+    padding: 100px;
+    margin: 20px auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    ;
+    background-color: #bbbbbb9a;
 
+  }
+
+  .descripcion3 {
+    background-image: none;
+  }
+
+  .p3 {
+    width: 100%;
+    text-align: end;
+    padding: 20px;
+  }
+
+  .p4 {
+    padding: 100px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #bbbbbb00;
+    color: #e7e2e2;
+  }
+
+  .p5 {
+    padding: 100px;
+    margin: 0px auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #bbbbbb92;
+
+  }
 }
+
+
+
+@media screen and (max-width: 1080px) {}
