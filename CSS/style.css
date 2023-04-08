@@ -1,7 +1,6 @@
 * {
-  font-family: 'Alkatra';
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'Anuphan', sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -20,33 +19,57 @@ a {
   text-decoration: none;
 }
 
-/* Navbar */
+/* ---------Navbar -----------*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080808;
+  padding-left: 0.5rem;
+  margin-bottom: -25px;
+  color: rgb(212, 212, 212);
+
+}
+
+#logo a{
+  font-family: 'Lexend Tera', sans-serif;
+  font-weight: 700;
+  transition: all 0.8s ease;
+ 
+}
+#logo a:hover{
+  font-size: 1.1rem;
+  transition: all 0.8s ease;
+}
 header nav {
   display: flex;
-  justify-content: space-evenly;
-  background: #bbb;
+  justify-content: space-between;
+  
+  
 }
 
 header nav>* {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem ;
+  transition: all 1.5s ease;
 }
 
 header nav>*:hover {
-  background: #ddd;
+  background: #dddddd2d;
+  transition: all 0.6s ease;
 }
 
-.vehiculos>* {
+/* .vehiculos>* {
   visibility: hidden;
-  position: absolute;
+  position: absolute;  
   display: flex;
   flex-direction: column;
-  background: gainsboro;
+  background: rgba(220, 220, 220, 0.053);
   padding: 0.8rem;
   opacity: 0;
   transition: 0.4s all;
-}
+} */
 
-.vehiculos>a~a {
+/* .vehiculos>a~a {
   margin-top: 6vh;
 }
 
@@ -57,17 +80,19 @@ header nav>*:hover {
 .vehiculos:hover>* {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /* Splash (img grande) */
 .splash {
   background-image: url("../img/banner.jpg");
   width: 100%;
-  height: 300px;
+  height: 700px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  
+ 
 }
 
 .text-center {
@@ -122,19 +147,30 @@ header nav>*:hover {
 
 /* Carrousel */
 .porque-powereco img {
+  width: 800px;
+
+}
+.carrousel-autos{
+  display: flex;
+  justify-content: center;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .porques {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin: 1rem 2rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0 1rem 0 2.5rem;
 }
-
+.porques .porque{
+  width: 30%;
+}
 /* Footer */
 .footer {
-  background-color: #BFBFBF;
+  
+  background: #0c0c0c;
 
   text-align: center;
 }
@@ -181,6 +217,39 @@ header nav>*:hover {
   text-decoration: none;
 }
 
+/* ----------ACERCA DE NOSOTROS------------- */
+
+.mainAcerca{
+  margin-top:30px;
+  
+}
+
+/* .mainAcerca h1{
+  font-size: 4rem;
+  font-family: 'Lexend Tera', sans-serif;
+} */
+.mainAcerca h2{
+  font-size: 4rem;
+}
+
+.titulos{
+background-image: url(/img/acercade5.jpeg);
+padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------media querys----------- */
 @media screen and (max-width: 470px) {
   header nav {
     flex-direction: column;
@@ -206,4 +275,21 @@ header nav>*:hover {
   .porques {
     margin: 0.5rem 0.3rem;
   }
+
+  .splash{
+    height: 300px;
+    
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+  .splash{
+    height: 400px;
+    
+  }
+}
+
+@media screen and (max-width: 1080px) {
+
 }
