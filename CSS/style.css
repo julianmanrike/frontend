@@ -5,6 +5,33 @@
   padding: 0;
 }
 
+/*-----contacto------*/
+.titulo {
+  text-align: center;
+}
+
+.menu {
+  background-image: url(../img/contacto.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-color: #0c0c0c;
+  opacity:90%;
+  margin: auto;
+}
+
+.form {
+  margin: auto;
+  width: 40%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  background: rgba(188, 171, 171, 0.44);
+  border-radius: 26px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  text-align: center;
+}
+
 .maps {
   display: flex;
   justify-content: space-around;
@@ -340,6 +367,7 @@ header nav>*:hover {
   display: flex;
   justify-content: space-around;
 }
+
 .maps {
   display: flex;
   justify-content: space-around;
