@@ -9,7 +9,8 @@
 .titulo {
   text-align: center;
 }
-.body{
+
+.body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -17,18 +18,20 @@
 
 .menu {
   background-image: url(../img/contacto.jpg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  opacity:90%;
+  opacity: 90%;
   margin-top: 0.4%;
   margin-bottom: 0.4%;
 }
+
 .form {
-  @media only screen and(min-width: 250px) (max-width:750px)
- flex-direction: column 
-  margin: 5%;
+  @media only screen and(min-width: 250px) (max-width:750px) flex-direction: column;
+  margin: 0 auto;
+  margin-top: 5%;
+  /* margin-bottom: 5%; */
   padding: 5%;
-  width: 30%;
+  width: 35%;
   background: rgba(188, 171, 171, 0.44);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -36,11 +39,17 @@
   -webkit-backdrop-filter: blur(3.7px);
   text-align: center;
 }
+
+@media screen and (max-width:600px) {
+  .form {
+    width: 80%;
+  }
+}
+
 /* ----------- Sucursales ----------- */
 .directions {
   display: flex;
   justify-content: space-around;
-  color: whitesmoke;
 }
 
 .maps {
@@ -50,16 +59,10 @@
   justify-content: space-around;
 }
 
-.suc{
+.suc {
   text-align: center;
-  color: whitesmoke ; 
 }
 
-.fondosuc{
-  background-image: url(../img/muelle.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 /*
 .fondo {
 }
@@ -120,30 +123,30 @@ header nav>*:hover {
 
 /* --------iconos menu y cerrar ocultos ----------*/
 
-.menu-icon{
+.menu-icon {
   /* background-color: white; */
   width: 30px;
   margin-top: -30px;
   padding: 3px;
   display: none;
   float: right;
-  
+
 }
 
-#menu-check{
+#menu-check {
   opacity: 0;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 30px;
   height: 30px;
   cursor: pointer;
- 
+
 }
 
-.cerrar-icon{
-   padding: 3px;
-  width:30px;
+.cerrar-icon {
+  padding: 3px;
+  width: 30px;
   float: right;
   margin-top: -30px;
   /* background-color: rgb(255, 251, 251); */
@@ -151,46 +154,48 @@ header nav>*:hover {
 }
 
 
- /* ------- responsive menu habmurguesa------- */
+/* ------- responsive menu habmurguesa------- */
 @media screen and (max-width: 600px) {
- 
-  
-  header{
+
+
+  header {
     display: block;
     position: absolute;
     z-index: 100;
     width: 100%;
     /* height: 40px; */
-    }
-    #logo{
-      padding-top: 10px;
-    }
-
-    #inicio{
-       display:none;
-    }
-  
-    .menu-icon{
-      display: inline;
-    }
-
-    #menu-check:checked~nav{
-      display: flex;
- 
-      background-color: #080808;
-    }
-
-    #menu-check:checked~.cerrar-icon{
-      display: inline;
-    }
-    #menu-check:checked~.menu-icon{
-      display: none;
-    }
-
-
-  
-  
   }
+
+  #logo {
+    padding-top: 10px;
+  }
+
+  #inicio {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  #menu-check:checked~nav {
+    display: flex;
+
+    background-color: #080808;
+  }
+
+  #menu-check:checked~.cerrar-icon {
+    display: inline;
+  }
+
+  #menu-check:checked~.menu-icon {
+    display: none;
+  }
+
+
+
+
+}
 
 /* .vehiculos>* {
   visibility: hidden;
@@ -358,7 +363,7 @@ header nav>*:hover {
 /* ----------ACERCA DE NOSOTROS------------- */
 
 .mainAcerca {
-  margin-top: 30px;
+  margin-top: 0;
 
 }
 
@@ -382,9 +387,10 @@ header nav>*:hover {
 
 
 .descripcion1 {
-  padding:0;
+  padding: 0;
   display: flex;
 }
+
 .p1 {
   width: 50%;
   padding: 40px 20px;
@@ -394,9 +400,9 @@ header nav>*:hover {
 }
 
 
-.descripcion1 .img1{
+.descripcion1 .img1 {
   width: 50%;
-  
+
 }
 
 .descripcion2 {
@@ -419,17 +425,17 @@ header nav>*:hover {
 }
 
 .descripcion3 {
-  padding:0;
-  display:flex;
+  padding: 0;
+  display: flex;
 }
 
 .p3 {
   width: 50%;
   padding: 0px 30px;
-  margin:auto 0;
+  margin: auto 0;
 }
 
-.descripcion3 .img3{
+.descripcion3 .img3 {
   width: 50%;
 }
 
@@ -458,7 +464,7 @@ header nav>*:hover {
 }
 
 .p5 {
-  margin:auto 0 ;
+  margin: auto 0;
   padding: 0 20px;
   width: 80%;
   font-size: 1rem;
@@ -470,6 +476,21 @@ header nav>*:hover {
 .descripcion5 .img5 {
   width: 50%;
 }
+
+/* ----------- Sucursales ----------- */
+.directions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.maps {
+  padding: 3%;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 /* -----------media querys----------- */
 
@@ -487,7 +508,7 @@ header nav>*:hover {
   /* -----------Acerca de---------------- */
 
 
-  .descripcion1 .img1{
+  .descripcion1 .img1 {
     display: none;
   }
 
@@ -511,14 +532,14 @@ header nav>*:hover {
 
   }
 
-  .descripcion3 .img3{
+  .descripcion3 .img3 {
     display: none;
   }
 
   .p3 {
     width: 60%;
     text-align: end;
-    padding:  30px 30px 50px 30px;
+    padding: 30px 30px 50px 30px;
     margin-left: 40%;
   }
 
@@ -537,15 +558,19 @@ header nav>*:hover {
     margin: 0px auto;
     width: 100%;
     font-size: 1rem;
-   
-    
+
+
 
   }
 
-  .descripcion5 .img5{
+  .descripcion5 .img5 {
     display: none;
   }
 }
+
+
+
+
 
 
 @media screen and (max-width: 470px) {
@@ -584,7 +609,7 @@ header nav>*:hover {
   .mainAcerca h2 {
     font-size: 3rem;
   }
-  
+
   .titulos {
     background-image: url(/img/acercade5.jpeg);
     background-position: top right;
@@ -597,7 +622,7 @@ header nav>*:hover {
   .p3 {
     width: 80%;
     text-align: end;
-    padding:  30px 30px 50px 30px;
+    padding: 30px 30px 50px 30px;
     margin-left: 20%;
   }
 
@@ -605,8 +630,4 @@ header nav>*:hover {
 }
 
 
-@media screen and (max-width:360px) {
-  
-}
-
-
+@media screen and (max-width:360px) {}
