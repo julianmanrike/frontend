@@ -36,7 +36,6 @@
   -webkit-backdrop-filter: blur(3.7px);
   text-align: center;
 }
-
 /* ----------- Sucursales ----------- */
 .directions {
   display: flex;
@@ -480,10 +479,10 @@ header nav>*:hover {
 
 >>>>>>> 8e49fde33b109b8057ba79b30e37f80387ddec18
 
+
 /* -----------media querys----------- */
 
 @media screen and (max-width: 1080px) {}
-
 
 
 
