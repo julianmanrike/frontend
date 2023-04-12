@@ -25,7 +25,6 @@
 }
 .form {
   @media only screen and(min-width: 250px) (max-width:750px)
-   {
  flex-direction: column 
   margin: 5%;
   padding: 5%;
@@ -68,6 +67,7 @@ a {
   text-decoration: none;
 }
 
+/* -----------------Index------------------ */
 /* ---------Navbar -----------*/
 header {
   display: flex;
@@ -75,7 +75,8 @@ header {
   align-items: center;
   background: #080808;
   padding-left: 0.5rem;
-  margin-bottom: -25px;
+  /* margin-bottom: -25px; */
+  /* height: 40px; */
   color: rgb(212, 212, 212);
 
 }
@@ -84,6 +85,7 @@ header {
   font-family: 'Lexend Tera', sans-serif;
   font-weight: 700;
   transition: all 0.8s ease;
+  padding: 5px;
 
 }
 
@@ -109,6 +111,79 @@ header nav>*:hover {
   transition: all 0.6s ease;
 }
 
+/* --------iconos menu y cerrar ocultos ----------*/
+
+.menu-icon{
+  /* background-color: white; */
+  width: 30px;
+  margin-top: -30px;
+  padding: 3px;
+  display: none;
+  float: right;
+  
+}
+
+#menu-check{
+  opacity: 0;
+  position:absolute;
+  top:0;
+  right:0;
+  width: 30px;
+  height: 30px;
+ 
+}
+
+.cerrar-icon{
+   padding: 3px;
+  width:30px;
+  float: right;
+  margin-top: -30px;
+  /* background-color: rgb(255, 251, 251); */
+  display: none;
+}
+
+
+ /* ------- responsive menu habmurguesa------- */
+@media screen and (max-width: 600px) {
+ 
+  
+  header{
+    display: block;
+    position: fixed;
+    
+    width: 100%;
+    /* height: 40px; */
+    }
+    #logo{
+      padding-top: 10px;
+    }
+
+    #inicio{
+       display:none;
+    }
+  
+    .menu-icon{
+      display: inline;
+    }
+
+    #menu-check:checked~nav{
+      display: flex;
+ 
+      background-color: #080808;
+    }
+
+    #menu-check:checked~.cerrar-icon{
+      display: inline;
+    }
+    #menu-check:checked~.menu-icon{
+      display: none;
+    }
+
+
+  
+  
+  }
+
 /* .vehiculos>* {
   visibility: hidden;
   position: absolute;  
@@ -133,7 +208,7 @@ header nav>*:hover {
   opacity: 1;
 } */
 
-/* Splash (img grande) */
+/* -----------Splash (img grande) -----------*/
 .splash {
   background-image: url("../img/banner.jpg");
   width: 100%;
@@ -151,6 +226,7 @@ header nav>*:hover {
   color: white;
   text-align: center;
   padding-top: 50px;
+  margin-top: -21px;
 }
 
 /* Tarjetas */
@@ -198,7 +274,7 @@ header nav>*:hover {
 
 /* Carrousel */
 .porque-powereco img {
-  width: 800px;
+  width: 100%;
 
 }
 
@@ -288,29 +364,31 @@ header nav>*:hover {
 
 .titulos {
   background-image: url(/img/acercade5.jpeg);
-  background-position: top;
+  background-position: top left;
   background-repeat: none;
   background-size: cover;
   padding: 50px;
   background-attachment: fixed;
 }
 
+
+
+.descripcion1 {
+  padding:0;
+  display: flex;
+}
 .p1 {
   width: 50%;
-  padding: 0 20px;
+  padding: 40px 20px;
   font-weight: 700;
   text-align: right;
 
 }
 
-.descripcion1 {
-  height: 400px;
-  background-image: url(/img/acercade4.jpg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: top right;
-  padding: 50px 0;
 
+.descripcion1 .img1{
+  width: 50%;
+  
 }
 
 .descripcion2 {
@@ -333,17 +411,18 @@ header nav>*:hover {
 }
 
 .descripcion3 {
-  background-image: url(/img/acercade3.jpg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: top right;
-  width: 100%;
-  height: 400px;
+  padding:0;
+  display:flex;
 }
 
 .p3 {
   width: 50%;
-  padding: 50px 10px;
+  padding: 0px 30px;
+  margin:auto 0;
+}
+
+.descripcion3 .img3{
+  width: 50%;
 }
 
 .descripcion4 {
@@ -365,27 +444,124 @@ header nav>*:hover {
 }
 
 .descripcion5 {
-  background-image: url(/img/acercade1.webp);
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-position: top;
-  background-size: cover;
+  display: flex;
   width: 100%;
 
 }
 
 .p5 {
-  padding: 100px;
-  margin: 0px auto 0px auto;
+  margin:auto 0 ;
+  padding: 0 20px;
   width: 80%;
-  font-size: 2rem;
+  font-size: 1rem;
 
-  background-color: #bbbbbb5a;
+  /* background-color: #bbbbbb5a; */
 
 }
 
+<<<<<<< HEAD
+=======
+.descripcion5 .img5{
+  width: 50%;
+}
+
+/* ----------- Sucursales ----------- */
+.directions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.maps {
+  padding: 3%;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+>>>>>>> 8e49fde33b109b8057ba79b30e37f80387ddec18
 
 /* -----------media querys----------- */
+
+@media screen and (max-width: 1080px) {}
+
+
+
+
+
+@media screen and (max-width: 780px) {
+  .splash {
+    height: 400px;
+
+  }
+
+  /* -----------Acerca de---------------- */
+
+
+  .descripcion1 .img1{
+    display: none;
+  }
+
+  .p1 {
+    width: 80%;
+    padding: 50px;
+    font-weight: 700;
+    text-align: left;
+
+
+  }
+
+  .p2 {
+    padding: 100px;
+    margin: 20px auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    ;
+    background-color: #bbbbbb9a;
+
+  }
+
+  .descripcion3 .img3{
+    display: none;
+  }
+
+  .p3 {
+    width: 60%;
+    text-align: end;
+    padding:  30px 30px 50px 30px;
+    margin-left: 40%;
+  }
+
+  .p4 {
+    padding: 100px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #bbbbbb00;
+    color: #e7e2e2;
+  }
+
+  .p5 {
+    padding: 100px;
+    margin: 0px auto;
+    width: 100%;
+    font-size: 1rem;
+   
+    
+
+  }
+
+  .descripcion5 .img5{
+    display: none;
+  }
+}
+
+
+
+
+
+
 @media screen and (max-width: 470px) {
   header nav {
     flex-direction: column;
@@ -417,72 +593,34 @@ header nav>*:hover {
 
   }
 
+  /* -----------acerca de------------- */
 
-}
-
-@media screen and (max-width: 780px) {
-  .splash {
-    height: 400px;
-
+  .mainAcerca h2 {
+    font-size: 3rem;
   }
-
-
-  .descripcion1 {
-    background-image: none;
-    height: auto;
-  }
-
-  .p1 {
-    width: 80%;
+  
+  .titulos {
+    background-image: url(/img/acercade5.jpeg);
+    background-position: top right;
+    background-repeat: none;
+    background-size: cover;
     padding: 50px;
-    font-weight: 700;
-    text-align: left;
-
-
-  }
-
-  .p2 {
-    padding: 100px;
-    margin: 20px auto;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    ;
-    background-color: #bbbbbb9a;
-
-  }
-
-  .descripcion3 {
-    background-image: none;
+    background-attachment: fixed;
   }
 
   .p3 {
-    width: 100%;
+    width: 80%;
     text-align: end;
-    padding: 20px;
+    padding:  30px 30px 50px 30px;
+    margin-left: 20%;
   }
 
-  .p4 {
-    padding: 100px;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: #bbbbbb00;
-    color: #e7e2e2;
-  }
 
-  .p5 {
-    padding: 100px;
-    margin: 0px auto;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: #bbbbbb92;
-
-  }
 }
 
 
+@media screen and (max-width:360px) {
+  
+}
 
-@media screen and (max-width: 1080px) {}
+
