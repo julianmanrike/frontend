@@ -9,6 +9,11 @@
 .titulo {
   text-align: center;
 }
+.body{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
 .menu {
   background-image: url(../img/contacto.jpg);
@@ -16,12 +21,14 @@
   background-repeat: no-repeat;
   opacity:90%;
   margin-top: 0.4%;
-
+  margin-bottom: 0.4%;
 }
 .form {
-  margin: auto;
-  width: 30%;
+  @media only screen and(min-width: 250px) (max-width:750px)
+ flex-direction: column 
+  margin: 5%;
   padding: 5%;
+  width: 30%;
   background: rgba(188, 171, 171, 0.44);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -29,8 +36,15 @@
   -webkit-backdrop-filter: blur(3.7px);
   text-align: center;
 }
+/* ----------- Sucursales ----------- */
+.directions {
+  display: flex;
+  justify-content: space-around;
+}
 
 .maps {
+  padding: 3%;
+  padding-bottom: 10%;
   display: flex;
   justify-content: space-around;
 }
@@ -445,7 +459,7 @@ header nav>*:hover {
 
 }
 
-.descripcion5 .img5{
+.descripcion5 .img5 {
   width: 50%;
 }
 
@@ -463,10 +477,10 @@ header nav>*:hover {
 }
 
 
+
 /* -----------media querys----------- */
 
 @media screen and (max-width: 1080px) {}
-
 
 
 
