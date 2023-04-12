@@ -40,6 +40,7 @@
 .directions {
   display: flex;
   justify-content: space-around;
+  color: whitesmoke;
 }
 
 .maps {
@@ -51,6 +52,13 @@
 
 .suc{
   text-align: center;
+  color: whitesmoke ; 
+}
+
+.fondosuc{
+  background-image: url(../img/muelle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /*
 .fondo {
@@ -462,21 +470,6 @@ header nav>*:hover {
   width: 50%;
 }
 
-/* ----------- Sucursales ----------- */
-.directions {
-  display: flex;
-  justify-content: space-around;
-}
-
-.maps {
-  padding: 3%;
-  padding-bottom: 10%;
-  display: flex;
-  justify-content: space-around;
-}
-
-
-
 /* -----------media querys----------- */
 
 @media screen and (max-width: 1080px) {}
@@ -552,10 +545,6 @@ header nav>*:hover {
     display: none;
   }
 }
-
-
-
-
 
 
 @media screen and (max-width: 470px) {
