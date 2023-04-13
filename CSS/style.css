@@ -415,6 +415,63 @@ header nav>*:hover {
   display: flex;
   justify-content: space-around;
 }
+/* ------------------VEHICULOS--------------------- */
+
+
+/* -----------------MENU SOLAPAS------------------ */
+#solapas{
+  /* display: flex; */
+  position: relative;
+  width: 100%;
+
+}
+
+#solapas input{
+  display: none;
+}
+
+#solapas label{
+  float:left;
+  cursor: pointer;
+  display: flex;
+  width: 25%;
+  font-size: 1.3em;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: solid 1px black;
+  
+}
+
+#solapas label:hover{
+  background-color: #000000a4;
+}
+
+#solapas input:checked + label{
+ background-color: #e7e2e2;
+ color: #080808;
+
+ border-bottom: solid 1px rgba(0, 0, 0, 0);
+}
+
+.solapa-contenido{
+  display:none;
+  position: absolute;
+  top:67px;
+  background-color: red;
+  width: 100%;
+}
+
+input:checked + label + .solapa-contenido{
+  display: flex;
+}
+
+
+/* ------------------CONTENIDO DE SOLAPAS----------------------- */
+/* -------------------RENAULT---------------- */
+
+
+
 
 
 
