@@ -528,7 +528,11 @@ input[type="radio"]:checked + label + .solapa-contenido{
 }
 
 
-
+.footer-vehiculos{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 
 /* -----------media querys----------- */
