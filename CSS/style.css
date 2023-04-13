@@ -20,9 +20,8 @@
   background-image: url(../img/contacto.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 90%;
-  margin-top: 0.4%;
-  margin-bottom: 0.4%;
+  opacity:0,1;
+
 }
 
 .form {
