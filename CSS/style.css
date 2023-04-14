@@ -33,7 +33,7 @@
   width: 35%;
   background: rgba(188, 171, 171, 0.44);
   border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(27, 26, 29, 0.822);
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
   text-align: center;
@@ -402,18 +402,7 @@ header nav>*:hover {
   width: 50%;
 }
 
-/* ----------- Sucursales ----------- */
-.directions {
-  display: flex;
-  justify-content: space-around;
-}
 
-.maps {
-  padding: 3%;
-  padding-bottom: 10%;
-  display: flex;
-  justify-content: space-around;
-}
 /* ------------------VEHICULOS--------------------- */
 
 
