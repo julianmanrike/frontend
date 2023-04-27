@@ -1,0 +1,188 @@
+/* ----------ACERCA DE NOSOTROS------------- */
+
+/* Juli porfa fijate xq veo como repetiradas algunas clases,puede ser? ahi te las marque */
+.mainAcerca {
+    margin-top: 0;
+}
+
+.mainAcerca h2 {
+    font-size: 4rem;
+}
+
+.titulos {
+    background-image: url("../img/acercade5.jpeg");
+    background-position: top left;
+    background-repeat: none;
+    background-size: cover;
+    padding: 50px;
+    background-attachment: fixed;
+}
+
+.descripcion1 {
+    padding: 0;
+    display: flex;
+}
+
+.p1 {
+    width: 50%;
+    padding: 40px 20px;
+    font-weight: 700;
+    text-align: right;
+}
+/* Esta mas abjo tiene el display none,puede ir aca? */
+.descripcion1 .img1 {
+    width: 50%;
+}
+
+.descripcion2 {
+    background-image: url("../img/acercade2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.p2 {
+    padding: 100px;
+    margin: 0px auto 0px auto;
+    width: 80%;
+    font-size: 1.5rem;
+    background-color: #bbbbbb7c;
+}
+
+.descripcion3 {
+    padding: 0;
+    display: flex;
+}
+
+.p3 {
+    width: 50%;
+    padding: 0px 30px;
+    margin: auto 0;
+}
+
+.descripcion3 .img3 {
+    width: 50%;
+}
+
+.descripcion4 {
+    background-image: url("../img/acercade6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.p4 {
+    padding: 100px;
+    margin: 0px auto 0px auto;
+    width: 60%;
+    font-size: 2rem;
+    background-color: #bbbbbb5a;
+}
+
+.descripcion5 {
+    display: flex;
+    width: 100%;
+}
+
+.p5 {
+    margin: auto 0;
+    padding: 0 20px;
+    width: 80%;
+    font-size: 1rem;
+    /* background-color: #bbbbbb5a; */
+}
+
+.descripcion5 .img5 {
+    width: 50%;
+}
+
+
+
+
+/* @MEDIA DE TODA LA PAGINA */
+
+
+/* -----------acerca de------------- */
+@media screen and (max-width: 470px) {
+    .mainAcerca h2 {
+        font-size: 3rem;
+    }
+
+    .titulos {
+        background-image: url("../img/acercade5.jpeg");
+        background-position: top right;
+        background-repeat: none;
+        background-size: cover;
+        padding: 50px;
+        background-attachment: fixed;
+    }
+
+    .p3 {
+        width: 80%;
+        text-align: end;
+        padding: 30px 30px 50px 30px;
+        margin-left: 20%;
+    }
+}
+
+
+@media screen and (max-width: 780px){
+    .descripcion1 .img1 {
+        display: none;
+      }
+    
+      .p1 {
+        width: 80%;
+        padding: 50px;
+        font-weight: 700;
+        text-align: left;
+    
+    
+      }
+    
+      .p2 {
+        padding: 100px;
+        margin: 20px auto;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        ;
+        background-color: #bbbbbb9a;
+    
+      }
+    
+      .descripcion3 .img3 {
+        display: none;
+      }
+    
+      .p3 {
+        width: 60%;
+        text-align: end;
+        padding: 30px 30px 50px 30px;
+        margin-left: 40%;
+      }
+    
+      .p4 {
+        padding: 100px;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: #bbbbbb00;
+        color: #e7e2e2;
+      }
+    
+      .p5 {
+        padding: 100px;
+        margin: 0px auto;
+        width: 100%;
+        font-size: 1rem;
+    
+      }
+    
+      .descripcion5 .img5 {
+        display: none;
+      }
+    }
+    
+   

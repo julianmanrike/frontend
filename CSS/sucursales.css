@@ -1,0 +1,32 @@
+/* ----------- Sucursales ----------- */
+.directions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.maps {
+    padding: 3%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.suc {
+    text-align: center;
+}
+
+/*
+  .fondo {
+  }
+  */
+
+/* main {
+    padding: 1%;
+  } */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+

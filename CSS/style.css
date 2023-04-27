@@ -4,79 +4,6 @@
   margin: 0;
   padding: 0;
 }
-
-/*-----contacto------*/
-.titulo {
-  text-align: center;
-}
-
-.body {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.menu {
-  background-image: url(../img/contacto.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity:0,1;
-
-}
-
-.form {
-  @media only screen and(min-width: 250px) (max-width:750px) flex-direction: column;
-  margin: 0 auto;
-  margin-top: 5%;
-  /* margin-bottom: 5%; */
-  padding: 5%;
-  width: 35%;
-  background: rgba(188, 171, 171, 0.44);
-  border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(27, 26, 29, 0.822);
-  backdrop-filter: blur(3.7px);
-  -webkit-backdrop-filter: blur(3.7px);
-  text-align: center;
-}
-
-@media screen and (max-width:600px) {
-  .form {
-    width: 80%;
-  }
-}
-
-/* ----------- Sucursales ----------- */
-.directions {
-  display: flex;
-  justify-content: space-around;
-}
-
-.maps {
-  padding: 3%;
-  padding-bottom: 10%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.suc {
-  text-align: center;
-}
-
-/*
-.fondo {
-}
-*/
-
-/* main {
-  padding: 1%;
-} */
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* -----------------Index------------------ */
 /* ---------Navbar -----------*/
 header {
   display: flex;
@@ -85,8 +12,10 @@ header {
   background: #080808;
   padding-left: 0.5rem;
   color: rgb(212, 212, 212);
-  
-
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #logo a {
@@ -94,33 +23,26 @@ header {
   font-weight: 700;
   transition: all 0.8s ease;
   padding: 5px;
-
+  text-decoration: none;
+  color: inherit;
 }
-
 #logo a:hover {
   font-size: 1.1rem;
   transition: all 0.8s ease;
 }
-
 header nav {
   display: flex;
   justify-content: space-between;
-
-
 }
-
 header nav>* {
   padding: 0.7rem;
   transition: all 1.5s ease;
 }
-
 header nav>*:hover {
   background: #dddddd2d;
   transition: all 0.6s ease;
 }
-
 /* --------iconos menu y cerrar ocultos ----------*/
-
 .menu-icon {
   width: 30px;
   margin-top: -25px;
@@ -155,7 +77,7 @@ header nav>*:hover {
 
 
 
-
+/*--------------------------BANNER------------------------- */
 /* -----------Splash (img grande) -----------*/
 .splash {
   background-image: url("../img/banner.jpg");
@@ -177,7 +99,7 @@ header nav>*:hover {
   margin-top: -21px;
 }
 
-/* Tarjetas */
+/*---------------Tarjetas---------------*/
 .tarjetas {
   margin: 0 auto;
   width: 98vw;
@@ -220,7 +142,7 @@ header nav>*:hover {
   padding-bottom: 0.4rem;
 }
 
-/* Carrousel */
+/*---------------Carrousel---------------*/
 .porque-powereco img {
   width: 100%;
 
@@ -245,7 +167,7 @@ header nav>*:hover {
   width: 30%;
 }
 
-/* Footer */
+/*---------------Footer---------------*/
 .footer {
 
   background: #0c0c0c;
@@ -295,379 +217,85 @@ header nav>*:hover {
   text-decoration: none;
 }
 
-/* ----------ACERCA DE NOSOTROS------------- */
 
-.mainAcerca {
-  margin-top: 0;
-
-}
-
-.mainAcerca h2 {
-  font-size: 4rem;
-}
-
-.titulos {
-  background-image: url(/img/acercade5.jpeg);
-  background-position: top left;
-  background-repeat: none;
-  background-size: cover;
-  padding: 50px;
-  background-attachment: fixed;
-}
-
-
-
-.descripcion1 {
-  padding: 0;
-  display: flex;
-}
-
-.p1 {
-  width: 50%;
-  padding: 40px 20px;
-  font-weight: 700;
-  text-align: right;
-
-}
-
-
-.descripcion1 .img1 {
-  width: 50%;
-}
-
-.descripcion2 {
-  background-image: url(/img/acercade2.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.p2 {
-  padding: 100px;
-  margin: 0px auto 0px auto;
-  width: 80%;
-  font-size: 1.5rem;
-  background-color: #bbbbbb7c;
-}
-
-.descripcion3 {
-  padding: 0;
-  display: flex;
-}
-
-.p3 {
-  width: 50%;
-  padding: 0px 30px;
-  margin: auto 0;
-}
-
-.descripcion3 .img3 {
-  width: 50%;
-}
-
-.descripcion4 {
-  background-image: url(/img/acercade6.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-}
-
-.p4 {
-  padding: 100px;
-  margin: 0px auto 0px auto;
-  width: 60%;
-  font-size: 2rem;
-
-  background-color: #bbbbbb5a;
-
-}
-
-.descripcion5 {
-  display: flex;
-  width: 100%;
-
-}
-
-.p5 {
-  margin: auto 0;
-  padding: 0 20px;
-  width: 80%;
-  font-size: 1rem;
-
-  /* background-color: #bbbbbb5a; */
-
-}
-
-.descripcion5 .img5 {
-  width: 50%;
-}
-
-
-/* ------------------VEHICULOS--------------------- */
-
-
-/* -----------------MENU SOLAPAS------------------ */
-#solapas{
-  /* display: flex; */
-  position: relative;
-  width: 100%;
-
-}
-
-#solapas input[type="radio"]{
-  display: none;
-}
-
-#solapas label{
-  float:left;
-  cursor: pointer;
-  display: flex;
-  width: 25%;
-  font-size: 1.3em;
-  padding: 20px;
-  background-color: black;
-  color: white;
-  border: solid 1px black;
-  
-}
-
-#solapas label:hover{
-  background-color: #000000c7;
-}
-
-#solapas input[type="radio"]:checked + label{
- background-color: #e7e2e2;
- color: #080808;
- border-bottom: solid 1px rgba(0, 0, 0, 0);
-}
-
-.solapa-contenido{
-  display:none;
-  position: absolute;
-  top:67px;
-  /* background-color: red; */
-  width: 100%;
-}
-
-input[type="radio"]:checked + label + .solapa-contenido{
-  display: flex;
-}
-
-
-/* ------------------CONTENIDO DE SOLAPAS----------------------- */
-/* -------------------RENAULT---------------- */
-
-.contenedor-tarjetas{
-  display: flex;
-  
-  flex-direction: row;
-  justify-content: center;
-
-  column-gap: 10px;
-  row-gap: 10px;
-  width: 100%;
-  flex-wrap: wrap;
-  
-}
-
-.tarjeta-auto{
-  width:24%;
-  position: relative;
-  /* background-color: rgba(165, 42, 42, 0.127); */
-}
-
-.tarjeta-auto h3{
-  font-size: 2em;
-  font-weight: 300;
-  padding-bottom: 15px;
-}
-
-.tarjeta-auto h4{
-  font-size: 1.5em;
-  font-weight: 300;
-  padding-bottom: 30px;
-}
-
-.tarjeta-auto img{
-  width:100%
-}
-
-#solapas .tarjeta-auto label{
-  width:100%;
-  display: block;
-  float:none;
-  cursor: pointer;
-}
-#solapas .tarjeta-auto input[type="checkbox"]{
-  position: absolute;
-  width:100%;
-  height: 60px;
-  opacity: 0;
-  cursor: pointer;
-  
-}
-
-.tarjeta-auto .descripcion{
-  padding: 20px 10px;
-  display: none;
-}
-.tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
-  display: flex;
-}
-
-
-.footer-vehiculos{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-
-/* -----------media querys----------- */
+/* -----------media querys generales----------- */
 
 @media screen and (max-width: 1080px) {}
-
-
-
 
 @media screen and (max-width: 780px) {
   .splash {
     height: 400px;
 
   }
-
-  /* -----------Acerca de---------------- */
-
-
-  .descripcion1 .img1 {
-    display: none;
-  }
-
-  .p1 {
-    width: 80%;
-    padding: 50px;
-    font-weight: 700;
-    text-align: left;
-
-
-  }
-
-  .p2 {
-    padding: 100px;
-    margin: 20px auto;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    ;
-    background-color: #bbbbbb9a;
-
-  }
-
-  .descripcion3 .img3 {
-    display: none;
-  }
-
-  .p3 {
-    width: 60%;
-    text-align: end;
-    padding: 30px 30px 50px 30px;
-    margin-left: 40%;
-  }
-
-  .p4 {
-    padding: 100px;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: #bbbbbb00;
-    color: #e7e2e2;
-  }
-
-  .p5 {
-    padding: 100px;
-    margin: 0px auto;
-    width: 100%;
-    font-size: 1rem;
-
-
-
-  }
-
-  .descripcion5 .img5 {
-    display: none;
-  }
 }
-
 @media screen and (max-width: 600px) {
   /* ------- responsive menu habmurguesa------- */
-  
-    header {
-      
-      display: block;
-      position: absolute;
-      z-index: 50;
-      width: 100%;
-      padding-bottom: 6px;
-      
-      /* height: 40px; */
-    }
-  
-    #logo {
-      padding-top: 10px;
-      
-     
-    }
-  
-    #inicio {
-      /* display: flex;   */
-      position: absolute;
-      width: 100%;
-      top:-250px;
-      left:0px;
-      z-index: -10;
-      opacity: 0;
-      transition: all 0.6s ease;
-      
-    }
-  
-    .menu-icon {
-      display: inline;
-    }
-  
-    #menu-check:checked~nav {
-      display: flex;
-      top:30px;
-      background-color: #080808;
-      opacity: 1;
-      transition: all 0.6s ease;
-      
-    }
-  
-    #menu-check:checked~.cerrar-icon {
-      display: inline;
-    }
-  
-    #menu-check:checked~.menu-icon {
-      display: none;
-    }
+
+  header {
+
+    display: block;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    padding-bottom: 6px;
+
+    /* height: 40px; */
+  }
+
+  #logo {
+    padding-top: 10px;
 
 
-    .titulos{
-      padding:80px;
-    }
-  
+  } 
+
+  #inicio {
+    /* display: flex;   */
+    position: absolute;
+    width: 100%;
+    top: -250px;
+    left: 0px;
+    z-index: -10;
+    opacity: 0;
+    transition: all 0.6s ease;
 
   }
 
+  .menu-icon {
+    display: inline;
+  }
+
+  #menu-check:checked~nav {
+    display: flex;
+    top: 30px;
+    background-color: #080808;
+    opacity: 1;
+    transition: all 0.6s ease;
+
+  }
+
+  #menu-check:checked~.cerrar-icon {
+    display: inline;
+  }
+
+  #menu-check:checked~.menu-icon {
+    display: none;
+  }
 
 
+  .titulos {
+    padding: 80px;
+  }
 
+
+}
+
+/* Navbar en Vertical */
 @media screen and (max-width: 470px) {
   header nav {
     flex-direction: column;
   }
 
+  /* ---------Tarjetas------------ */
   .tarjetas {
     width: 100vw;
     gap: 1rem;
@@ -696,12 +324,12 @@ input[type="radio"]:checked + label + .solapa-contenido{
 
   /* -----------acerca de------------- */
 
-  .mainAcerca h2 {
+  /* .mainAcerca h2 {
     font-size: 3rem;
   }
 
   .titulos {
-    background-image: url(/img/acercade5.jpeg);
+    background-image: url("/img/acercade5.jpeg");
     background-position: top right;
     background-repeat: none;
     background-size: cover;
@@ -717,7 +345,7 @@ input[type="radio"]:checked + label + .solapa-contenido{
   }
 
 
+  */
 }
-
 
 @media screen and (max-width:360px) {}

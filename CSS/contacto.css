@@ -1,0 +1,46 @@
+/*-----contacto------*/
+.titulo {
+  text-align: center;
+
+}
+
+/* Mirar este estilo,lo saque y no pasa nada,no veo cambios. */
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu {
+  background-image: url("../img/contacto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0, 1;
+
+}
+
+.form {
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 5%;
+  /* margin-bottom: 5%; */
+  padding: 5%;
+  width: 35%;
+  background: rgba(188, 171, 171, 0.44);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(27, 26, 29, 0.822);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  text-align: center;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+  .form {
+    width: 80%;
+  }
+}
+
+
