@@ -173,9 +173,12 @@ input[type="radio"]:checked + label + .solapa-contenido{
 
 @media screen and (max-width:600px){
 
+
+
   #vehiculos-marca{
     height: 100%;
     padding-top: 39px;
+    margin-bottom: 0px;
     
   }
   #solapas{
@@ -194,10 +197,11 @@ input[type="radio"]:checked + label + .solapa-contenido{
 
   .solapa-contenido{   
     position: static;
-    
     display: none;
     
   }
+
+
 
 
   input[type="radio"]:checked + label + .solapa-contenido{
