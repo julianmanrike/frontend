@@ -1,40 +1,98 @@
 /*-----contacto------*/
 .titulo {
   text-align: center;
+  margin-bottom: 10px;
 
 }
 
 /* Mirar este estilo,lo saque y no pasa nada,no veo cambios. */
-.body {
+/* .body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-}
+} */
 
 .menu {
-  background-image: url("../img/contacto.jpg");
+  background-image: url("../img/contacto.jpg"); 
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   opacity: 0, 1;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
 }
 
+
 .form {
+  
   flex-direction: column;
-  margin: 0 auto;
-  margin-top: 5%;
-  /* margin-bottom: 5%; */
-  padding: 5%;
-  width: 35%;
+  padding: 20px;
+  width: 350px;
   background: rgba(188, 171, 171, 0.44);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(27, 26, 29, 0.822);
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
-  text-align: center;
+  margin: 50px 0;
+ 
+}
+.validar{
+  font-size: 0.8em;
+  color:rgb(215, 54, 54);
+  text-align: end;
+  padding-right: 10px;
 }
 
+input, label, textarea{
+  width:100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  resize: none;
+  outline: 0px;
+  border: none;
+  transition: all 0.6s ease;
+}
+input, textarea{
+  background-color: rgba(240, 248, 255, 0.634);
+  border: 2px solid rgba(0, 0, 0, 0);
+}
 
+label[for="info"]{
+  width: 80%;
+  font-size: 0.8em;
+}
+input[type="checkbox"]{
+  width: 20px;
+}
+#enviar{
+  margin-bottom: 0px;
+  background-color: rgba(74, 74, 190, 0.76);
+  border: 2px solid rgba(0, 0, 0, 0.475);
+}
+
+#enviar:hover{
+  background-color: rgb(39, 39, 192);
+}
+#reset{
+  background-color: rgba(188, 55, 55, 0.76);
+  border: 2px solid rgba(0, 0, 0, 0.475);
+}
+#reset:hover{
+  background-color: rgb(219, 41, 41);
+}
+
+.invalido{
+  border: 2px solid rgb(219, 41, 41);
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover{
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.475);
+}
 
 
 @media screen and (max-width:600px) {

@@ -1,6 +1,5 @@
 /* ----------ACERCA DE NOSOTROS------------- */
 
-/* Juli porfa fijate xq veo como repetiradas algunas clases,puede ser? ahi te las marque */
 .mainAcerca {
     margin-top: 0;
 }
@@ -29,7 +28,7 @@
     font-weight: 700;
     text-align: right;
 }
-/* Esta mas abjo tiene el display none,puede ir aca? */
+
 .descripcion1 .img1 {
     width: 50%;
 }
@@ -109,7 +108,7 @@
     }
 
     .titulos {
-        background-image: url("../img/acercade5.jpeg");
+        /* background-image: url("../img/acercade5.jpeg"); */
         background-position: top right;
         background-repeat: none;
         background-size: cover;

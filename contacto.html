@@ -30,43 +30,36 @@
             </nav>
         </div>
     </header>
-
-    <menu class="menu">
-        <h2 class="titulo">Contacto</h2>
-
+    <main class="menu">
+        <!-- <img src="../img/contacto.jpg" alt="auto background" class="background"> -->
+        
         <form class="form" action="show-data.html" target="_blank">
-            <label for="name">Nombre:</label>
-            <input type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
-            <br>
-            <br>
-            <br>
-            <label for="lasname">Apellido:</label>
-            <input type="text" name="lastname" placeholder="Ingrese su Apellido aqui...">
-            <br>
-            <br>
-            <br>
+            <h2 class="titulo">Contacto</h2>
+            <label for="firstname">Nombre:</label>
+            <div id="nombreInvalido" class="validar"></div>
+            <input type="text" name="firstname" placeholder="Ingrese su nombre aqui..." id="nombre" required>
+            
+            <label for="lastname">Apellido:</label>
+            <div id="apellidoInvalido" class="validar"></div>
+            <input type="text" name="lastname" placeholder="Ingrese su Apellido aqui..." id="apellido">
+          
             <label for="email">Email:</label>
-            <input type="text" name="mail" placeholder="Ingrese su email aqui...">
-            <br>
-            <br>
-            <br>
+            <div id="emailInvalido" class="validar"></div>
+            <input type="email" name="mail" placeholder="Ingrese su email aqui..." id="email" required>
+           
             <label for="consulta">Consulta:</label>
-            <input type="text" name="Consulta" placeholder="consulta...">
-            <br>
-            <br>
-            <br>
+            <textarea name="consulta" id="" cols="30" rows="10" placeholder="Ingrese su consulta" required></textarea>
+            <!-- <input type="text" name="Consulta" placeholder="consulta..."> -->
+          
             <label for="info">Desea recibir informacion por mail?</label>
-            <input type="checkbox" name=></input>
-            <br>
-            <br>
-            <br>
-            <br>
-            <input type="submit" value="Enviar">
-            <br>
-            <br>
+            <input type="checkbox"></input>
+           
+            <input type="submit" value="Enviar" id="enviar">
+            <input type="reset" id="reset">
+      
         </form>
-        <br><br><br>
-    </menu>
+        
+    </main>
     <footer class="footer">
 
         <div class="redes">
@@ -84,7 +77,7 @@
                 Página creada por alumnos de codo a codo 2023 ©
             </nav> -->
     </footer>
-
+    <script src="js/contacto.js"></script>
     <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
 
 </body>
