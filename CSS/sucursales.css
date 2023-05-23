@@ -1,95 +1,145 @@
-body{
-    background-color: rgba(123, 147, 183, 0.349);
+html {
+    background-image: url('../img/fondo-sucursales.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.alerta {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+small {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: gainsboro;
 }
 
 /* ----------- Sucursales ----------- */
-.directions {
+main {
     display: flex;
     justify-content: space-around;
-}
-
-.maps {
-    padding: 3%;
-    padding-bottom: 10%;
-    display: flex;
-    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+    /* background: url('../img/pexels-ivy-son-3490393.jpeg'); */
 }
 
 .suc {
     text-align: center;
 }
 
-/*
-  .fondo {
-  }
-  */
+
+
+
 
 /* main {
     padding: 1%;
-  } */
+}
+*/
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
+label {
+    color: lightgrey;
+    /* text-shadow: 1px 2px 8px gainsboro; */
+}
+
 /***********PILAR***********/
 
 .container {
-    /*   display: flex;
-     */  
-     margin:10px;
-     display: grid;
-     flex-direction: column;
-      align-items: center;
-    }
-    .verFoto{
-        background-image: url('../img/pilar.jpg');
-        text-decoration: none;
-        max-width: 200px;
-        padding: 100px;
-        margin: 25px;
-        color: white;
-        border-radius: 6px ;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        background-repeat: no-repeat;
-     
-    }
-    
-    
-    .verFoto {
-     appearance: none;
-    }
-    
-    .verFoto:checked ~ #mapa{
-        height: 0px;
-        display: none;
-        
-    }
-    /***********RECOLETA***********/
-    .container-reco {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    .recol{
-    background-image: url('../img/recoleta.jpg');
-        text-decoration: none;
-        max-width: 200px;
-        padding: 100px;
-        margin: 25px;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        background-repeat: no-repeat;
-    }
-    .recol{
-        appearance: none;
-    }
-    .recol:checked ~ #mapa2{
-        height: 0px;
-        display: none;
-    }
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+}
 
+.verFoto {
+    background-image: url('../img/pilar.jpg');
+    text-decoration: none;
+    max-width: 500px;
+    padding: 150px;
+    margin: 15px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-repeat: no-repeat;
+
+}
+
+
+.verFoto {
+    appearance: none;
+}
+
+.verFoto:checked~#mapa {
+    height: 0px;
+    display: none;
+
+}
+
+/***********RECOLETA***********/
+.container-reco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recol {
+    background-image: url('../img/recoleta.jpg');
+    text-decoration: none;
+    max-width: 500px;
+    padding: 150px;
+    margin: 15px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.recol {
+    appearance: none;
+}
+
+.recol:checked~#mapa2 {
+    height: 0px;
+    display: none;
+}
+
+/***********TIGRE***********/
+.container-tigre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tigre {
+    background-image: url('../img/tigre.jpeg');
+    text-decoration: none;
+    max-width: 500px;
+    padding: 150px;
+    margin: 5px 15px 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.tigre {
+    appearance: none;
+}
+
+.tigre:checked~#mapa3 {
+    height: 0px;
+    display: none;
+}
