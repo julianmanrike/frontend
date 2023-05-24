@@ -1,239 +1,234 @@
 /* -----------------MENU SOLAPAS------------------ */
 #vehiculos-marca{
- min-height: 100vh;
-}
-#solapas{
-  /* display: flex; */
-  position: relative;
-  width: 100%;
-
-}
-
-#solapas input[type="radio"]{
-  display: none;
-}
-
-#solapas label{
-  float:left;
-  cursor: pointer;
-  display: flex;
-  width: 25%;
-  font-size: 1.3em;
-  padding: 20px;
-  background-color: #080808;
-  color: white;
-  border: solid 1px #080808;
-  transition: all 0.5s ease;
-  
-}
-
-#solapas label:hover{
-  background-color: #000000c7;
-  transition: all 0.5s ease;
-}
-
-#solapas input[type="radio"]:checked + label{
- background-color: #e7e2e223;
- color: #080808;
- border-bottom: solid 1px rgba(0, 0, 0, 0);
-}
-
-.solapa-contenido{
-  display:none;
-  position: absolute;
-  top:67px;
-  width: 100%;
-  margin-top: 40px;
-}
-
-input[type="radio"]:checked + label + .solapa-contenido{
-  display: block;
-}
-
-
-/* ------------------CONTENIDO DE SOLAPAS----------------------- */
-
-.contenedor-tarjetas{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 10px;
-  row-gap: 10px;
-  width: 100%;
-  flex-wrap: wrap;
-  
-}
-
-.tarjeta-auto{
-  width:24%;
-  border: #080808 solid 1px;
-  /* position: static; */
-  /* background-color: rgba(165, 42, 42, 0.127); */
-}
-
-.tarjeta-auto h3{
-  font-size: 2em;
-  font-weight: 300;
-  padding-bottom: 15px;
-  margin-left: 10px;
-}
-
-.tarjeta-auto h4{
-  font-size: 1.5em;
-  font-weight: 300;
-  padding-bottom: 30px;
-  margin-left: 10px;
-}
-
-.tarjeta-auto img{
-  width:100%;
-  margin-bottom: 20px;
-}
-
-#solapas .tarjeta-auto label{
-  width:100%;
-  display: block;
-  float:none;
-  cursor: pointer;
-}
-#solapas .tarjeta-auto input[type="checkbox"]{
-  position: absolute;
-  width:24%;
-  height: 60px;
-  opacity: 0;
-  cursor: pointer;
-  
-}
-
-.tarjeta-auto .descripcion{
-  padding: 20px 10px;
-  display: none;
-}
-.tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
-  display: flex;
-  position: absolute;
-  margin-left: -1px;
-  background-color: #080808;
-  color: aliceblue;
-  width: 24%;
-}
-
-/* .footer-vehiculos{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}  */
-/* ------Seccion consultar precio------ */
-
-#precio{
-  text-align: center;
-}
-
-#precio h2{
-  font-size: 1.2em;
-  padding: 0 20px;
-  font-weight: 400;
-}
-
-#precio .boton-contacto{
-  width: 200px;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background-color: #080808;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-#precio .boton-contacto:hover{
-  background-color: #000000c7;
-  transition: all 0.5s ease;
-}
-
-
-
-@media screen and (max-width: 780px){
-  .tarjeta-auto{
-    width:48%;
-  }
-
-  #vehiculos-marca{
-    min-height: 160vh;
-    margin-bottom: 50px;
-  }
-
-
-
-  .tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
-    width: 48%;
-  }
-
-  #solapas .tarjeta-auto input[type="checkbox"]{
-    width: 48%;
-  }
-}
-
-@media screen and (max-width:600px){
-
-
-
-  #vehiculos-marca{
+  min-height: 100vh;
+ }
+ #solapas{
+   /* display: flex; */
+   position: relative;
+   width: 100%;
+ 
+ }
+ 
+ #solapas input[type="radio"]{
+   display: none;
+ }
+ 
+ #solapas label{
+   float:left;
+   cursor: pointer;
+   display: flex;
+   width: 25%;
+   font-size: 1.3em;
+   padding: 20px;
+   background-color: #444242;
+   color: rgb(211, 206, 206);
+   border: solid 1px #1d1d1d;
+   transition: all 0.5s ease;
    
-    min-height: 100vh;
-    padding-top: 39px;
-    margin-bottom: 0px;
+ }
+ 
+ #solapas label:hover{
+   background-color: #201f1fc7;
+   transition: all 0.5s ease;
+ }
+ 
+ #solapas input[type="radio"]:checked + label{
+  background-color: #e7e2e223;
+  color: #3b3737;
+  border-bottom: solid 1px rgba(0, 0, 0, 0);
+ }
+ 
+ .solapa-contenido{
+   display:none;
+   position: absolute;
+   top:67px;
+   width: 100%;
+   margin-top: 40px;
+ }
+ 
+ input[type="radio"]:checked + label + .solapa-contenido{
+   display: block;
+ }
+ 
+ 
+ /* ------------------CONTENIDO DE SOLAPAS----------------------- */
+ 
+ .contenedor-tarjetas{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   column-gap: 10px;
+   row-gap: 10px;
+   width: 100%;
+   flex-wrap: wrap;
+   
+ }
+ 
+ .tarjeta-auto{
+   width:24%;
+   border: #222222 solid 1px;
+   /* position: static; */
+   /* background-color: rgba(165, 42, 42, 0.127); */
+ }
+ 
+ .tarjeta-auto h3{
+   font-size: 2em;
+   font-weight: 300;
+   padding-bottom: 15px;
+   margin-left: 10px;
+ }
+ 
+ .tarjeta-auto h4{
+   font-size: 1.5em;
+   font-weight: 300;
+   padding-bottom: 30px;
+   margin-left: 10px;
+ }
+ 
+ .tarjeta-auto img{
+   width:100%;
+   margin-bottom: 20px;
+ }
+ 
+ #solapas .tarjeta-auto label{
+   width:100%;
+   display: block;
+   float:none;
+   cursor: pointer;
+ }
+ #solapas .tarjeta-auto input[type="checkbox"]{
+   position: absolute;
+   width:24%;
+   height: 60px;
+   opacity: 0;
+   cursor: pointer;
+   
+ }
+ 
+ .tarjeta-auto .descripcion{
+   padding: 20px 10px;
+   display: none;
+ }
+ .tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
+   display: flex;
+   position: absolute;
+   margin-left: -1px;
+   background-color: #dccfee;
+   color: rgb(118, 142, 165);
+   width: 24%;
+ }
+ 
+ /* .footer-vehiculos{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+ }  */
+ /* ------Seccion consultar precio------ */
+ 
+ #precio{
+   text-align: center;
+ }
+ 
+ #precio h2{
+   font-size: 1em;
+   padding: 0 20px;
+   font-weight: 200;
+   
+ }
+ 
+ #precio .boton-contacto{
+   width: 200px;
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   background-color: #080808;
+   padding: 20px;
+   margin: 20px 0;
+ }
+ 
+ #precio .boton-contacto:hover{
+   background-color: #000000c7;
+   transition: all 0.5s ease;
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 780px){
+   .tarjeta-auto{
+     width:48%;
+   }
+ 
+   #vehiculos-marca{
+     min-height: 160vh;
+     margin-bottom: 50px;
+   }
+ 
+ 
+ 
+   .tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
+     width: 48%;
+   }
+ 
+   #solapas .tarjeta-auto input[type="checkbox"]{
+     width: 48%;
+   }
+ }
+ 
+ @media screen and (max-width:600px){
+ 
+ 
+ 
+   #vehiculos-marca{
     
-  }
-  #solapas{
-    margin-bottom: 40px;
-  }
-  #solapas label{
-    float:none;
-    cursor: pointer;
-    display: flex;
-    width: 100%;
-    font-size: 1.2em;
-    padding: 20px;
-    transition: all 0.5s ease;
-  }
-
-
-  .solapa-contenido{   
-    position: static;
-    display: none;
-    
-  }
-
-
-
-
-  input[type="radio"]:checked + label + .solapa-contenido{
-    display: block;
-    margin-bottom: 50px;
-  }
-
-
-  .tarjeta-auto h3{
-    font-size: 1.2em;
-  }
-  .tarjeta-auto h4{
-    font-size: 1.2em;
-  }
-
-  #solapas .tarjeta-auto label{
-    font-size: 0.8em;
-    
-  }
-
-
-
-
-
-}
-
-
-
-
-
-
-  
+     min-height: 100vh;
+     padding-top: 39px;
+     margin-bottom: 0px;
+     
+   }
+   #solapas{
+     margin-bottom: 40px;
+   }
+   #solapas label{
+     float:none;
+     cursor: pointer;
+     display: flex;
+     width: 100%;
+     font-size: 1.2em;
+     padding: 20px;
+     transition: all 0.5s ease;
+   }
+ 
+ 
+   .solapa-contenido{   
+     position: static;
+     display: none;
+     
+   }
+ 
+ 
+ 
+ 
+   input[type="radio"]:checked + label + .solapa-contenido{
+     display: block;
+     margin-bottom: 50px;
+   }
+ 
+ 
+   .tarjeta-auto h3{
+     font-size: 1.2em;
+   }
+   .tarjeta-auto h4{
+     font-size: 1.2em;
+   }
+ 
+   #solapas .tarjeta-auto label{
+     font-size: 0.8em;
+     
+   }
+ 
+ 
+ 
+ 
+ 
+ }
+ 

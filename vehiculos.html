@@ -8,248 +8,237 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css"> 
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="./CSS/vehiculos.css">
     <title>PowerEco</title>
 </head>
 
-    <body>
-        <header>
+<body>
+    <header>
 
-            <div id="logo"><a href="">PowerEco</a></div>
-            <div class="menu-desplegable">
-                <input type="checkbox" name="hamburguesa" id="menu-check">
-                <img class="menu-icon" src="img/menu-icon.png" alt="menu">
-                <img class="cerrar-icon" src="img/cerrar-icon.png" alt="cerrar">
-                <nav id="inicio">
+        <div id="logo"><a href="">PowerEco</a></div>
+        <div class="menu-desplegable">
+            <input type="checkbox" name="hamburguesa" id="menu-check">
+            <img class="menu-icon" src="img/menu-icon.png" alt="menu">
+            <img class="cerrar-icon" src="img/cerrar-icon.png" alt="cerrar">
+            <nav id="inicio">
 
-                    <a href="index.html">Inicio</a>
-                    <div class="vehiculos"> <a href="vehiculos.html">Vehiculos</a>
-                        <!-- <a href="marcas.html">Marca 1</a>
+                <a href="index.html">Inicio</a>
+                <div class="vehiculos"> <a href="vehiculos.html">Vehiculos</a>
+                    <!-- <a href="marcas.html">Marca 1</a>
                         <a href="marcas.html">Marca 2</a>
                         <a href="marcas.html">Marca 3</a> -->
+                </div>
+                <a href="sucursales.html">Concesionarios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Acerca de</a>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+    <section id="vehiculos-marca">
+        <!-- <h1>Nuestos vehiculos</h1> -->
+        <div id="solapas">
+
+            <input type="radio" name="marca" id="renault" checked>
+            <label for="renault">Renault</label>
+            <div id="contenido-renault" class="solapa-contenido">
+                <div>
+
+                    <div class="contenedor-tarjetas">
+                        <div class="tarjeta-auto">
+                            <img src="img/renault/kwid.png" alt="">
+                            <h3>Kwid</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/renault/twizy1.png" alt="">
+                            <h3>Ywizy</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/renault/kangoo_z.e1.png" alt="">
+                            <h3>Kangoo z.e</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/renault/zoe1.png" alt="">
+                            <h3>Zoe</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
                     </div>
-                    <a href="sucursales.html">Concesionarios</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="nosotros.html">Acerca de</a>
-                </nav>
+                </div>
             </div>
 
+            <input type="radio" name="marca" id="volvo">
+            <label for="volvo">Volvo</label>
+            <div id="contenido-volvo" class="solapa-contenido">
+                <div>
+                    <div class="contenedor-tarjetas">
+                        <div class="tarjeta-auto">
+                            <img src="img/volvo/c40-1.png" alt="">
+                            <h3>C40</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
 
-        </header>
+                        <div class="tarjeta-auto">
+                            <img src="img/volvo/volvo-xc60-1.png" alt="">
+                            <h3>C60</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
 
-        
-            <section id="vehiculos-marca">
-                <!-- <h1>Nuestos vehiculos</h1> -->
-                <div id="solapas">
+                        <div class="tarjeta-auto">
+                            <img src="img/volvo/XC40-1.png" alt="">
+                            <h3>XC40</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
 
-                    <input type="radio" name="marca" id="renault" checked>
-                    <label for="renault">Renault</label>
-                    <div id="contenido-renault" class="solapa-contenido">
-                        <div>
-                            
-                            <div class="contenedor-tarjetas">
-                                <div class="tarjeta-auto">
-                                    <img src="img/renault/kwid.png" alt="">
-                                    <h3>Kwid</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/renault/twizy1.png" alt="">
-                                    <h3>Ywizy</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/renault/kangoo_z.e1.png" alt="">
-                                    <h3>Kangoo z.e</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/renault/zoe1.png" alt="">
-                                    <h3>Zoe</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-                            </div>
+                        <div class="tarjeta-auto">
+                            <img src="img/volvo/XC90-T8-1.png" alt="">
+                            <h3>XC90</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
                         </div>
                     </div>
-
-                    <input type="radio" name="marca" id="volvo">
-                    <label for="volvo">Volvo</label>
-                    <div id="contenido-volvo" class="solapa-contenido">
-                        <div>
-                            <div class="contenedor-tarjetas">
-                                <div class="tarjeta-auto">
-                                    <img src="img/volvo/c40-1.png" alt="">
-                                    <h3>C40</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/volvo/volvo-xc60-1.png" alt="">
-                                    <h3>C60</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/volvo/XC40-1.png" alt="">
-                                    <h3>XC40</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/volvo/XC90-T8-1.png" alt="">
-                                    <h3>XC90</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="radio" name="marca" id="tesla">
-                    <label for="tesla">Tesla</label>
-                    <div id="contenido-tesla" class="solapa-contenido">
-                        <div>
-                            <div class="contenedor-tarjetas">
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/tesla/model 3-1.png" alt="">
-                                    <h3>MODEL 3</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/tesla/modelo s-1.png" alt="">
-                                    <h3>MODEL S </h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/tesla/modelo y-1.png" alt="">
-                                    <h3>MODEL Y</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <input type="radio" name="marca" id="peugeot">
-                    <label for="peugeot">Peugeot</label>
-                    <div id="contenido-peugeot" class="solapa-contenido">
-                        <div>
-                            <div class="contenedor-tarjetas">
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/peugeot/e2008-1.png" alt="">
-                                    <h3>e2008</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/peugeot/e208-1.png" alt="">
-                                    <h3>e208</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/peugeot/e308-1.png" alt="">
-                                    <h3>e308</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                                <div class="tarjeta-auto">
-                                    <img src="img/peugeot/ion-1.png" alt="">
-                                    <h3>Ion</h3>
-                                    <h4>Desde: $-----</h4>
-                                    <input type="checkbox" name="conocer" class="conocer-mas">
-                                    <label for="conocer" class="conocer">Conocer mas</label>
-                                    <p class="descripcion">Breve descripcion del auto</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    
-
-                    
-                    
                 </div>
-            </section>
+            </div>
 
-            <section id="precio">
-                <h2>Para consultar precios de cada vehiculo y planes de pago contacte su sucursal mas cercana</h2>
-                <a class="boton-contacto"href="contacto.html">Contacto</a>
-            </section>
-            
-            <footer class="footer footer-vehiculos">
+            <input type="radio" name="marca" id="tesla">
+            <label for="tesla">Tesla</label>
+            <div id="contenido-tesla" class="solapa-contenido">
+                <div>
+                    <div class="contenedor-tarjetas">
 
-                <div class="redes">
-                    <a class="link" href="https://github.com/julianmanrike/frontend" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a class="link" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a class="link" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <div class="tarjeta-auto">
+                            <img src="img/tesla/model 3-1.png" alt="">
+                            <h3>MODEL 3</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/tesla/modelo s-1.png" alt="">
+                            <h3>MODEL S </h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/tesla/modelo y-1.png" alt="">
+                            <h3>MODEL Y</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+
+                    </div>
+
                 </div>
-                <div class="boton-up">
-                    <a title="Volver al inicio" href="#inicio"> <i class="fa-regular fa-circle-up text-white fa-2x"></i></a>
-                </div>
-                <div class="social-media">Página creada por alumnos de codo a codo 2023 ©</div>
-        
-                <!-- <nav class="social-media">
+            </div>
+
+            <input type="radio" name="marca" id="peugeot">
+            <label for="peugeot">Peugeot</label>
+            <div id="contenido-peugeot" class="solapa-contenido">
+                <div>
+                    <div class="contenedor-tarjetas">
+
+                        <div class="tarjeta-auto">
+                            <img src="img/peugeot/e2008-1.png" alt="">
+                            <h3>e2008</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/peugeot/e208-1.png" alt="">
+                            <h3>e208</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/peugeot/e308-1.png" alt="">
+                            <h3>e308</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+
+                        <div class="tarjeta-auto">
+                            <img src="img/peugeot/ion-1.png" alt="">
+                            <h3>Ion</h3>
+                            <h4>Desde: $-----</h4>
+                            <input type="checkbox" name="conocer" class="conocer-mas">
+                            <label for="conocer" class="conocer">Conocer mas</label>
+                            <p class="descripcion">Breve descripcion del auto</p>
+                        </div>
+                
+    </section>
+    <section id="precio">
+        <h2>Para consultar precios de cada vehiculo y planes de pago contacte su sucursal mas cercana</h2>
+        <a class="boton-contacto" href="contacto.html">Contacto</a>
+    </section>
+
+    <footer class="footer footer-vehiculos">
+
+        <div class="redes">
+            <a class="link" href="https://github.com/julianmanrike/frontend" target="_blank"><i
+                    class="fa-brands fa-github"></i></a>
+            <a class="link" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="link" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="boton-up">
+            <a title="Volver al inicio" href="#inicio"> <i class="fa-regular fa-circle-up text-white fa-2x"></i></a>
+        </div>
+        <div class="social-media">Página creada por alumnos de codo a codo 2023 ©</div>
+
+        <!-- <nav class="social-media">
                     Página creada por alumnos de codo a codo 2023 ©
                 </nav> -->
-            </footer>
-        
-            <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
+    </footer>
 
-    </body>
+    <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
+
+</body>
 
 </html>
