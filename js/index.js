@@ -3,7 +3,7 @@
 //API DE MARCELA---------- http://mcerda.pythonanywhere.com/autos
 
 //**********************************TARJETA 1**********************************
-const t1 = fetch('https://cdn.imagin.studio/getImage?&customer=arpowereco&make=peugeot&modelFamily=308&modelRange=308&modelVariant=ce&modelYear=2019&powerTrain=fossil&transmission=0&bodySize=5&trim=0&paintId=pspc0016&angle=01')
+const t1 = fetch('http://mcerda.pythonanywhere.com/autos')
 	.then(t1 => {
 		if (t1.ok) {
 			return t1.blob(); // Obtener los datos binarios de la imagen
