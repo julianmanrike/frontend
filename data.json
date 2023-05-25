@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Kwid",
+        "desde": "$----",
+        "descripcion": "Probando",
+        "imagen": "img/renault/kwid.png"
+    },
+    {
+        "nombre": "Ywizy",
+        "desde": "$----",
+        "descripcion": "Breve descripcion del auto",
+        "imagen": "img/renault/twizy1.png"
+    },
+    {
+        "nombre": "Kangoo z.e",
+        "desde": "$----",
+        "descripcion": "Breve descripcion del auto",
+        "imagen": "img/renault/kangoo_z.e1.png"
+    },
+    {
+        "nombre": "Zoe",
+        "desde": "$----",
+        "descripcion": "Breve descripcion del auto",
+        "imagen": "img/renault/zoe1.png"
+    }
+]
