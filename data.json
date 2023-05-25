@@ -22,10 +22,9 @@
         "desde": "$----",
         "descripcion": "en tu casa, Para una recarga más rápida, el wallbox de 7.4Kw te permite recuperar 80% de energía en tan sólo 5 horas.",
         "imagen": "img/renault/zoe1.png"
-    }
-]
+    },
 
-[
+
     {
         "nombre": "C40",
         "desde": "$----",
@@ -50,9 +49,9 @@
         "descripcion": "motor eléctrico trasero de 88 caballos y una batería de iones de litio de 18,8 kWh ubicada en la parte inferior central. En total desarrolla una potencia máxima de 455 caballos. Disfruta de la etiqueta CERO de la DGT y una autonomía eléctrica de 70 kilómetros.",
         "imagen": "img/volvo/XC90-T8-1.png"
     },
-]
 
-[
+
+
     {
         "nombre": "Model 3",
         "desde": "$----",
@@ -72,15 +71,13 @@
         "imagen": "img/tesla/modelo y-1.png"
     },
   
-]
 
-[
+
+
     {
         "nombre": "e2008",
         "desde": "$----",
-        "descripcion": "motor eléctrico de 100 kW (136 CV) y una batería con una capacidad de 50 kWh (útiles 46 kWh) que añade 356 kg de peso al SUV.
-
-        Se ofrece con seis niveles de acabados: Active, Active Pack, Allure Pack y los deportivos GT.",
+        "descripcion": "motor eléctrico de 100 kW (136 CV) y una batería con una capacidad de 50 kWh (útiles 46 kWh) que añade 356 kg de peso al SUV.Se ofrece con seis niveles de acabados: Active, Active Pack, Allure Pack y los deportivos GT.",
         "imagen": "img/peugeot/e2008-1.png"
     },
     {
@@ -92,17 +89,13 @@
     {
         "nombre": "e308",
         "desde": "$----",
-        "descripcion": "batería de iones de litio de 51 kWh. La energía almacenada en la batería es usada principalmente para alimentar un motor de 115 kW (156 CV) y 260 Nm de par máximo. Presenta una configuración de tracción delantera.
-
-        Es capaz de alcanzar una velocidad máxima de 170 km/h. Está limitada electrónicamente. El nuevo 308 eléctrico tiene 410 kilómetros de autonomía según el ciclo WLTP. Declara un consumo energético medio de 15,1 kWh a los 100 km.",
+        "descripcion": "batería de iones de litio de 51 kWh. La energía almacenada en la batería es usada principalmente para alimentar un motor de 115 kW (156 CV) y 260 Nm de par máximo. Presenta una configuración de tracción delantera.Es capaz de alcanzar una velocidad máxima de 170 km/h. Está limitada electrónicamente. El nuevo 308 eléctrico tiene 410 kilómetros de autonomía según el ciclo WLTP. Declara un consumo energético medio de 15,1 kWh a los 100 km.",
         "imagen": "img/peugeot/e308-1.png"
     },
     {
         "nombre": "Ion",
         "desde": "$----",
-        "descripcion": "La gama mecánica del Peugeot iOn está formada por un único, y pequeño, motor eléctrico síncrono con imán permanente, que entrega 49 KW o 67 CV de potencia a 8.000 rpm.
-
-        La alimentación de este motor eléctrico proviene de unas baterías de iones de litio con 80 celdas y una capacidad útil de 15,2 Kw/h que le proporcionan una autonomía de 150 kilómetros.",
+        "descripcion": "La gama mecánica del Peugeot iOn está formada por un único, y pequeño, motor eléctrico síncrono con imán permanente, que entrega 49 KW o 67 CV de potencia a 8.000 rpm.La alimentación de este motor eléctrico proviene de unas baterías de iones de litio con 80 celdas y una capacidad útil de 15,2 Kw/h que le proporcionan una autonomía de 150 kilómetros.",
         "imagen": "img/peugeot/ion-1.png"
-    },
+    }
 ]
