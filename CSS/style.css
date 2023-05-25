@@ -15,16 +15,17 @@ header {
 }
 nav a {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 #logo a {
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-size: x-large;
   font-weight: 700;
   transition: all 0.8s ease;
   padding: 5px;
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 #logo a:hover {
   font-size: 1.1rem;
@@ -88,16 +89,37 @@ header nav>*:hover {
   background-size: cover;
   background-repeat: no-repeat;
 
-
+  margin-bottom: 50px;
 }
 
 .text-center {
-  font-family: Sans-serif;
+  font-family: 'Roboto Slab', serif;
   color: white;
   text-align: center;
   padding-top: 50px;
   margin-top: -21px;
 }
+
+
+.splash h3 {
+  font-size: 30px;
+  color: white;
+  /*      margin-bottom: 20px;
+ */
+  animation: slideFromRight 1s forwards;
+
+}
+
+.splash p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 40px;
+  animation: slideFromRight 1s forwards;
+
+
+}
+
+
 
 /*---------------Tarjetas---------------*/
 .tarjetas {
@@ -111,9 +133,9 @@ header nav>*:hover {
 
 .tarjeta {
   min-width: 20rem;
-  display: block;
+  display: flex;
   background: #ccc;
-  width: 20rem;
+  /* width: 20rem; */
   height: 25rem;
 }
 
