@@ -264,6 +264,74 @@ header nav>*:hover {
 }
 
 
+/* Marcas recomendadas / "avalados por nosotros" */
+
+#marcas-recomendadas-titulo {
+  text-align: center;
+}
+
+.avalados-por {
+display: flex;
+justify-content: space-around;
+gap: .1rem;
+margin: 0 1rem;
+}
+.avalados-por .seguros, .avalados-por .autos-marcas, .avalados-por .manufactureros {
+display: flex;
+/* background: #eee; */
+max-height: fit-content;
+min-height: 180px; 
+min-width: 22%;
+overflow: hidden;
+
+}
+.avalados-por .seguros img, .avalados-por .autos-marcas img, .avalados-por .manufactureros img{
+width: 100%;
+height: auto;
+object-fit: scale-down;
+}
+.seguros {
+display: flex;
+align-items: center;
+width: 35vw;
+gap: .5rem;
+}
+.seguros #seguro-1{
+width: 80%;
+height: auto;
+}
+.seguros #seguro-2{
+width: 21%;
+}
+
+.autos-marcas {
+width: 22vw;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.autos-marcas img {
+max-width: 15%;
+max-height: 25px;
+margin: 0 .1rem;
+}
+.autos-marcas img:nth-of-type(1) {
+margin-right: .7rem;
+}
+
+.manufactureros {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+width: 25vw;
+}
+.manufactureros img {
+width: 100%;
+height: auto;
+}
+
 /*---------------Carrousel---------------*/
 .carrousel-autos {
   margin: 1rem;
