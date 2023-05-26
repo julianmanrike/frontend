@@ -47,7 +47,7 @@ fetch('http://127.0.0.1:5500/data.json')
   });
 
 
-  //marca volvo
+//************************marca volvo. NO SE PUEDE APLICAR EL MISMO CODIGO YA QUE CADA TARJETAS DE LAS QUE SIGUEN TIENE LAS ETIQUETAS H3,H4 Y P ************************
 
 /*  fetch('http://127.0.0.1:5500/data.json')
   .then((response) => response.json())
