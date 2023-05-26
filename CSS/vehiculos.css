@@ -206,29 +206,29 @@
    }
  
  
- 
+  
  
    input[type="radio"]:checked + label + .solapa-contenido{
-     display: block;
-     margin-bottom: 50px;
-   }
- 
- 
-   .tarjeta-auto h3{
-     font-size: 1.2em;
-   }
-   .tarjeta-auto h4{
-     font-size: 1.2em;
-   }
- 
-   #solapas .tarjeta-auto label{
-     font-size: 0.8em;
-     
-   }
- 
- 
- 
- 
- 
- }
+    display: block;
+    margin-bottom: 50px;
+  }
+
+
+  .tarjeta-auto h3{
+    font-size: 1.2em;
+  }
+  .tarjeta-auto h4{
+    font-size: 1.2em;
+  }
+
+  #solapas .tarjeta-auto label{
+    font-size: 0.8em;
+    
+  }
+
+
+
+
+
+}
  
