@@ -1,122 +1,130 @@
 /* -----------------MENU SOLAPAS------------------ */
+h1 {
+  text-align: center;
+  margin-top: 10px;/* Aumenta el espacio entre el h1 y el resto */
+  color: #333333; /* Cambia el color del texto a un tono más suave */
+}
+
 #vehiculos-marca{
   min-height: 100vh;
- }
- #solapas{
-   /* display: flex; */
-   position: relative;
-   width: 100%;
- 
- }
- 
- #solapas input[type="radio"]{
-   display: none;
- }
- 
- #solapas label{
-   float:left;
-   cursor: pointer;
-   display: flex;
-   width: 25%;
-   font-size: 1.3em;
-   padding: 20px;
-   background-color: #444242;
-   color: rgb(211, 206, 206);
-   border: solid 1px #1d1d1d;
-   transition: all 0.5s ease;
-   
- }
- 
- #solapas label:hover{
-   background-color: #201f1fc7;
-   transition: all 0.5s ease;
- }
- 
- #solapas input[type="radio"]:checked + label{
-  background-color: #e7e2e223;
-  color: #3b3737;
-  border-bottom: solid 1px rgba(0, 0, 0, 0);
- }
- 
- .solapa-contenido{
-   display:none;
-   position: absolute;
-   top:67px;
-   width: 100%;
-   margin-top: 40px;
- }
- 
- input[type="radio"]:checked + label + .solapa-contenido{
-   display: block;
- }
- 
- 
- /* ------------------CONTENIDO DE SOLAPAS----------------------- */
- 
- .contenedor-tarjetas{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   column-gap: 10px;
-   row-gap: 10px;
-   width: 100%;
-   flex-wrap: wrap;
-   
- }
- 
- .tarjeta-auto{
-   width:24%;
-   border: #222222 solid 1px;
-   /* position: static; */
-   /* background-color: rgba(165, 42, 42, 0.127); */
- }
- 
- .tarjeta-auto h3{
-   font-size: 2em;
-   font-weight: 300;
-   padding-bottom: 15px;
-   margin-left: 10px;
- }
- 
- .tarjeta-auto h4{
-   font-size: 1.5em;
-   font-weight: 300;
-   padding-bottom: 30px;
-   margin-left: 10px;
- }
- 
- .tarjeta-auto img{
-   width:100%;
-   margin-bottom: 20px;
- }
- 
- #solapas .tarjeta-auto label{
-   width:100%;
-   display: block;
-   float:none;
-   cursor: pointer;
- }
- #solapas .tarjeta-auto input[type="checkbox"]{
-   position: absolute;
-   width:24%;
-   height: 60px;
-   opacity: 0;
-   cursor: pointer;
-   
- }
- 
- .tarjeta-auto .descripcion{
-   padding: 20px 10px;
-   display: none;
- }
- .tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
-   display: flex;
-   position: absolute;
-   margin-left: -1px;
-   background-color: #dccfee;
-   color: rgb(118, 142, 165);
-   width: 24%;
- }
+}
+#solapas{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#solapas input[type="radio"]{
+  display: none;
+}
+
+#solapas label{
+  float: left;
+  cursor: pointer;
+  display: flex;
+  width: 25%;
+  font-size: 1.3em;
+  padding: 20px;
+  background-color: #888888; /* Cambia el color de fondo a un gris medio */
+  color: #ffffff; /* Cambia el color del texto a blanco */
+  border: none; /* Elimina el borde */
+  transition: all 0.5s ease;
+  border-radius: 5px; /* Agregado: bordes redondeados */
+}
+
+#solapas label:hover{
+  background-color: #999999; /* Cambia el color de fondo al pasar el cursor */
+  transition: all 0.5s ease;
+}
+
+#solapas input[type="radio"]:checked + label{
+  background-color: #cccccc; /* Cambia el color de fondo cuando está seleccionado */
+  color: #333333;
+}
+
+.solapa-contenido{
+  display:none;
+  position: absolute;
+  top:67px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+input[type="radio"]:checked + label + .solapa-contenido{
+  display: block;
+}
+
+
+/* ------------------CONTENIDO DE SOLAPAS----------------------- */
+
+.contenedor-tarjetas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.tarjeta-auto{
+  width:24%;
+  border: #aaaaaa solid 1px; /* Cambia el color del borde a una tonalidad más suave */
+  border-radius: 5px; /* Agregado: bordes redondeados */
+  background-color: #dddddd; /* Cambia el color de fondo a un gris medio */
+}
+
+.tarjeta-auto h3{
+  font-size: 2em;
+  font-weight: 300;
+  padding-bottom: 15px;
+  margin-left: 10px;
+}
+
+.tarjeta-auto h4{
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-bottom: 30px;
+  margin-left: 10px;
+}
+
+.tarjeta-auto img{
+  width:100%;
+  margin-bottom: 20px;
+}
+
+#solapas .tarjeta-auto label{
+  width:100%;
+  display: block;
+  float:none;
+  cursor: pointer;
+}
+
+#solapas .tarjeta-auto input[type="checkbox"]{
+  position: absolute;
+  width:24%;
+  height: 60px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tarjeta-auto .descripcion{
+  padding: 20px 10px;
+  display: none;
+}
+
+.tarjeta-auto input[type="checkbox"]:checked ~ .descripcion{
+  display: flex;
+  position: absolute;
+  margin-left: -1px;
+  background-color: #eeeeee; /* Cambia el color de fondo cuando está seleccionado */
+  color: #333333;
+  width: 24%;
+  border-radius: 5px; /* Agregado: bordes redondeados */
+}
+
+/* Resto del código... */
+
  
  /* .footer-vehiculos{
    position: absolute;

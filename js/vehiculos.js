@@ -1,98 +1,88 @@
-fetch('http://127.0.0.1:5500/data.json')
-  .then((response) => response.json())
-  .then((data) => {
-    const tarjetas = data;
-
-    const contenedorTarjetas = document.querySelector('.contenedor-tarjetas');//selecciono la clase
-    console.log(tarjetas)
-
-    //Creo todo el hmtl
-    tarjetas.forEach((tarjeta) => {
-      const divTarjeta = document.createElement('div');
-      divTarjeta.className = 'tarjeta-auto';
-
-      const imagen = document.createElement('img');
-      imagen.src = tarjeta.imagen;
-      imagen.alt = '';
-
-      const h3 = document.createElement('h3');
-      h3.textContent = tarjeta.nombre;
-
-      const h4 = document.createElement('h4');
-      h4.textContent = `Desde: ${tarjeta.desde}`;
-
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.name = 'conocer';
-      input.className = 'conocer-mas';
-
-      const label = document.createElement('label');
-      label.htmlFor = 'conocer';
-      label.className = 'conocer';
-      label.textContent = 'Conocer más';
-
-      const p = document.createElement('p');
-      p.className = 'descripcion';
-      p.textContent = tarjeta.descripcion;
-
-      divTarjeta.appendChild(imagen);
-      divTarjeta.appendChild(h3);
-      divTarjeta.appendChild(h4);
-      divTarjeta.appendChild(input);
-      divTarjeta.appendChild(label);
-      divTarjeta.appendChild(p);
-
-      contenedorTarjetas.appendChild(divTarjeta);
-    });
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    mostrarInformacion(data);
+  })
+  .catch(error => {
+    console.error('Error al obtener los vehículos:', error);
   });
 
+function mostrarInformacion(data) {
+  var solapasDiv = document.getElementById('solapas');
 
-//************************marca volvo. NO SE PUEDE APLICAR EL MISMO CODIGO YA QUE CADA TARJETAS DE LAS QUE SIGUEN TIENE LAS ETIQUETAS H3,H4 Y P ************************
+  // Iterar sobre las marcas de vehículos
+  data.vehiculos.forEach(marca => {
+    var marcaId = marca.marca.toLowerCase();
 
-/*  fetch('http://127.0.0.1:5500/data.json')
-  .then((response) => response.json())
-  .then((data) => {
-    const tarjetas = data;
+    // Crear input radio y label para la marca
+    var inputRadio = document.createElement('input');
+    inputRadio.setAttribute('type', 'radio');
+    inputRadio.setAttribute('name', 'marca');
+    inputRadio.setAttribute('id', marcaId);
+    if (marcaId === 'renault') {
+      inputRadio.checked = true;
+    }
+    var label = document.createElement('label');
+    label.setAttribute('for', marcaId);
+    label.textContent = marca.marca;
 
-    const contenedorTarjetas = document.querySelector('.contenedor-volvo');//selecciono la clase
-    console.log(tarjetas)
+    // Crear div para el contenido de la marca
+    var contenidoDiv = document.createElement('div');
+    contenidoDiv.setAttribute('id', 'contenido-' + marcaId);
+    contenidoDiv.classList.add('solapa-contenido');
 
-    //Creo todo el hmtl
-    tarjetas.forEach((tarjeta) => {
-      const divTarjeta = document.createElement('div');
-      divTarjeta.className = 'tarjeta-auto';
+    // Crear contenedor de tarjetas para los modelos
+    var contenedorTarjetas = document.createElement('div');
+    contenedorTarjetas.classList.add('contenedor-tarjetas');
 
-      const imagen = document.createElement('img');
-      imagen.src = tarjeta.imagen;
-      imagen.alt = '';
+    // Iterar sobre los modelos de cada marca
+    marca.modelos.forEach(modelo => {
+      // Crear tarjeta para cada modelo
+      var tarjeta = document.createElement('div');
+      tarjeta.classList.add('tarjeta-auto');
 
-      const h3 = document.createElement('h3');
-      h3.textContent = tarjeta.nombre;
+      var imagen = document.createElement('img');
+      imagen.src = modelo.imagen;
+      imagen.alt = modelo.nombre;
 
-      const h4 = document.createElement('h4');
-      h4.textContent = `Desde: ${tarjeta.desde}`;
+      var titulo = document.createElement('h3');
+      titulo.textContent = modelo.nombre;
 
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.name = 'conocer';
-      input.className = 'conocer-mas';
+      var precio = document.createElement('h4');
+      precio.textContent = 'Desde: ' + modelo.precio;
 
-      const label = document.createElement('label');
-      label.htmlFor = 'conocer';
-      label.className = 'conocer';
-      label.textContent = 'Conocer más';
+      var checkbox = document.createElement('input');
+      checkbox.setAttribute('type', 'checkbox');
+      checkbox.setAttribute('name', 'conocer');
+      checkbox.classList.add('conocer-mas');
 
-      const p = document.createElement('p');
-      p.className = 'descripcion';
-      p.textContent = tarjeta.descripcion;
+      var labelConocer = document.createElement('label');
+      labelConocer.setAttribute('for', 'conocer');
+      labelConocer.classList.add('conocer');
+      labelConocer.textContent = 'Conocer más';
 
-      divTarjeta.appendChild(imagen);
-      divTarjeta.appendChild(h3);
-      divTarjeta.appendChild(h4);
-      divTarjeta.appendChild(input);
-      divTarjeta.appendChild(label);
-      divTarjeta.appendChild(p);
+      var descripcion = document.createElement('p');
+      descripcion.classList.add('descripcion');
+      descripcion.textContent = modelo.descripcion;
 
-      contenedorTarjetas.appendChild(divTarjeta);
+      // Agregar elementos a la tarjeta
+      tarjeta.appendChild(imagen);
+      tarjeta.appendChild(titulo);
+      tarjeta.appendChild(precio);
+      tarjeta.appendChild(checkbox);
+      tarjeta.appendChild(labelConocer);
+      tarjeta.appendChild(descripcion);
+
+      // Agregar tarjeta al contenedor
+      contenedorTarjetas.appendChild(tarjeta);
     });
-  });*/
+
+    // Agregar contenedor de tarjetas al contenido de la marca
+    contenidoDiv.appendChild(contenedorTarjetas);
+
+    // Agregar input radio, label y contenido al contenedor principal
+    solapasDiv.appendChild(inputRadio);
+    solapasDiv.appendChild(label);
+    solapasDiv.appendChild(contenidoDiv);
+  });
+}
