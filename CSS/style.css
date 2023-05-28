@@ -439,7 +439,7 @@ header nav>*:hover {
   display: flex;
   /* text-align: justify; */
   justify-content: space-between;
-  margin: 5rem 0;
+  margin: 1rem 0;
   padding: 0 2.5rem;
 }
 
@@ -630,6 +630,7 @@ header nav>*:hover {
 }
 
 @media screen and (max-width:360px) {}
+
 
 /* pantallas de tamaño pequeño */
 @media screen and (max-width: 600px) {
