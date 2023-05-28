@@ -90,7 +90,7 @@ header nav>*:hover {
 .splash {
   background-image: url("../img/banner.jpg");
   width: 100%;
-  height: 700px;
+  height: 50rem;
   object-fit: cover;
   object-position: center center;
   background-size: cover;
@@ -189,7 +189,10 @@ header nav>*:hover {
 .nuestros-servicios h4,
 .nuestros-servicios h5 {
   text-align: center;
-  font-weight: 400;
+  /*   font-weight: 400;
+ */
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
 }
 
 /* clase de todos los divs de los servicios */
@@ -273,68 +276,83 @@ header nav>*:hover {
 
 #marcas-recomendadas-titulo {
   text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Roboto Slab', serif;
+  margin: 50px;
 }
 
 .avalados-por {
-display: flex;
-justify-content: space-around;
-gap: .1rem;
-margin: 0 1rem;
+  display: flex;
+  justify-content: space-around;
+  gap: .1rem;
+  margin: 0 1rem;
 }
-.avalados-por .seguros, .avalados-por .autos-marcas, .avalados-por .manufactureros {
-display: flex;
-/* background: #eee; */
-max-height: fit-content;
-min-height: 180px; 
-min-width: 22%;
-overflow: hidden;
+
+.avalados-por .seguros,
+.avalados-por .autos-marcas,
+.avalados-por .manufactureros {
+  display: flex;
+  /* background: #eee; */
+  max-height: fit-content;
+  min-height: 180px;
+  min-width: 22%;
+  overflow: hidden;
 
 }
-.avalados-por .seguros img, .avalados-por .autos-marcas img, .avalados-por .manufactureros img{
-width: 100%;
-height: auto;
-object-fit: scale-down;
+
+.avalados-por .seguros img,
+.avalados-por .autos-marcas img,
+.avalados-por .manufactureros img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
 }
+
 .seguros {
-display: flex;
-align-items: center;
-width: 35vw;
-gap: .5rem;
+  display: flex;
+  align-items: center;
+  width: 35vw;
+  gap: .5rem;
 }
-.seguros #seguro-1{
-width: 80%;
-height: auto;
+
+.seguros #seguro-1 {
+  width: 80%;
+  height: auto;
 }
-.seguros #seguro-2{
-width: 21%;
+
+.seguros #seguro-2 {
+  width: 21%;
 }
 
 .autos-marcas {
-width: 22vw;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
+  width: 22vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
+
 .autos-marcas img {
-max-width: 15%;
-max-height: 25px;
-margin: 0 .1rem;
+  max-width: 15%;
+  max-height: 25px;
+  margin: 0 .1rem;
 }
+
 .autos-marcas img:nth-of-type(1) {
-margin-right: .7rem;
+  margin-right: .7rem;
 }
 
 .manufactureros {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25vw;
 }
+
 .manufactureros img {
-width: 100%;
-height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /*---------------Carrousel---------------*/
@@ -370,6 +388,12 @@ height: auto;
   flex: 1 0 100%;
 }
 
+.imagen-carrousel {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .flechas {
   position: absolute;
   display: flex;
@@ -385,6 +409,8 @@ height: auto;
   cursor: pointer;
   opacity: 0.2;
   transition: all 0.5s ease;
+
+
 }
 
 .flechas:hover,
@@ -402,6 +428,7 @@ height: auto;
   right: 0;
   justify-content: center;
   align-items: center;
+
 }
 
 
@@ -412,7 +439,7 @@ height: auto;
   display: flex;
   /* text-align: justify; */
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 5rem 0;
   padding: 0 2.5rem;
 }
 
@@ -603,3 +630,29 @@ height: auto;
 }
 
 @media screen and (max-width:360px) {}
+
+/* pantallas de tamaño pequeño */
+@media screen and (max-width: 600px) {
+  .imagenes-carrousel {
+    height: 40%;
+  }
+
+  .flechas {
+    height: 10rem;
+    font-size: 3rem;
+  }
+}
+
+/* pantallas de tamaño mediano */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .imagenes-carrousel {
+    height: 50%;
+  }
+}
+
+/* pantallas de tamaño grande */
+@media screen and (min-width: 1025px) {
+  .imagenes-carrousel {
+    height: 60%;
+  }
+}
