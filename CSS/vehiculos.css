@@ -1,3 +1,105 @@
+/* ********************CRUD******************** */
+.products-list {
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  min-width: 200px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+}
+
+.card .options {
+  margin-top: 8px;
+}
+
+.btn-close-form {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #da0047;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  right: -12px;
+  top: -12px;
+}
+
+/*------- FORM ------- */
+.form-content{
+  padding: 25px;
+  border-radius: 8px;
+  position: relative;
+  background: #ffffff;
+  max-width: 300px;
+  margin: 1.75rem auto;
+}
+
+.form-content .control {
+  padding: 5px 0;
+}
+
+.form-content .form-footer {
+  margin-top: 8px;
+}
+
+label {
+  width: 70px;
+  display: inline-block;
+}
+/*------- FORM end -------*/
+
+.modal {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.msg-error {
+  color: #da0047;
+  display: block;
+  margin-top: 10px;
+}
+
+.alert {
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
+  z-index: 150;
+}
+
+.alert.success {
+  background: #8eed8e;
+  border: 1px #60d560 solid;
+  color: #15540d;
+}
+
+.alert.error {
+  background: #ffb6b6;
+  border: 1px #e14747 solid;
+  color: #8a0606;
+}
+
+
 /* -----------------MENU SOLAPAS------------------ */
 h1 {
   text-align: center;

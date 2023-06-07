@@ -15,6 +15,85 @@
 </head>
 
 <body>
+
+    <!--********************* Aca empieza el crud********************* -->
+    <button type="button" id="btnAdd">Agregar producto</button>
+
+    <div class="modal" id="modalAdd">
+      <div class="form-content">
+        <div class="btn-close-form" onclick="closeModalAdd()">X</div>
+        <div class="form-body">
+          <form id="formAdd">
+            <div class="control">
+              <label>Nombre: </label>
+              <input type="text" name="nombre">
+            </div>
+            <div class="control">
+              <label>Color: </label>
+              <input type="text" name="color">
+            </div>
+            <div class="control">
+              <label>Precio: </label>
+              <input type="number" name="precio">
+            </div>
+          </form>
+        </div>
+        <div class="form-footer">
+            <button type="button" onclick="closeModalAdd()">Cancelar</button>
+            <button type="button" onclick="createProduct()">Guardar</button>
+        </div>
+        <span id="msgFormAdd" class="msg-error"></span>
+      </div>
+    </div>
+  
+    <div class="modal" id="modalEdit">
+      <div class="form-content">
+        <div class="btn-close-form" onclick="closeModalEdit()">X</div>
+        <div class="form-body">
+          <form id="formEdit">
+            <input type="hidden" id="ID">
+            <div class="control">
+              <label>Nombre: </label>
+              <input type="text" id="nombre">
+            </div>
+            <div class="control">
+              <label>Color: </label>
+              <input type="text" id="color">
+            </div>
+            <div class="control">
+              <label>Precio: </label>
+              <input type="number" id="precio"></div>
+          </form>
+        </div>
+        <div class="form-footer">
+            <button type="button" onclick="closeModalEdit()">Cancelar</button>
+            <button type="button" onclick="updateProduct()">Guardar cambios</button>
+        </div>
+        <span id="msgFormEdit" class="msg-error"></span>
+      </div>
+    </div>
+  
+    <div class="modal" id="modalConfirm">
+      <div class="form-content">
+        <div class="btn-close-form" onclick="closeModalConfirm()">X</div>
+        <div class="form-body">
+          <h3>Eliminar</h3>
+          <p>¿Estas seguro de eliminar el producto?</p>
+        </div>
+        <div class="form-footer">
+            <button type="button" onclick="confirmDelete(false)">No</button>
+            <button type="button" onclick="confirmDelete(true)">Si</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="alert" id="alert">Algo sucedió..</div>
+  
+    <div id="productsList" class="products-list"></div>
+  
+
+
+
     <header>
 
         <div id="logo"><a href="">PowerEco</a></div>
