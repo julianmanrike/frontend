@@ -1,269 +1,284 @@
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    mostrarInformacion(data);
-  })
-  .catch(error => {
-    console.error('Error al obtener los vehículos:', error);
-  });
+fetch("https://julianmanrike.pythonanywhere.com/vehiculos")
+        .then(response=>response.json())
+        .then(data =>{
+            mostrarInfo(data)
+        })
+        .catch(error =>{
+            console.log("error al obtener datos de la api vehiculos", error)
+        })
 
-function mostrarInformacion(data) {
-  var solapasDiv = document.getElementById('solapas');
+function mostrarInfo(data){
+    
+    var solapasDiv = document.getElementById('solapas');
+    marcas=[]
+    //array para obtener marcas sin repetir
+    data.forEach(vehiculos=>{
+        let marcaId = vehiculos.marca.toLowerCase()
+        if(!marcas.includes(marcaId)){
 
-  // Iterar sobre las marcas de vehículos
-  data.vehiculos.forEach(marca => {
-    var marcaId = marca.marca.toLowerCase();
+            marcas.push(marcaId)
+        }
+    })
 
-    // Crear input radio y label para la marca
-    var inputRadio = document.createElement('input');
-    inputRadio.setAttribute('type', 'radio');
-    inputRadio.setAttribute('name', 'marca');
-    inputRadio.setAttribute('id', marcaId);
-    if (marcaId === 'renault') {
-      inputRadio.checked = true;
-    }
-    var label = document.createElement('label');
-    label.setAttribute('for', marcaId);
-    label.textContent = marca.marca;
+    marcas.forEach(marcaId=>{
+        //se recorre array por marcas
+        console.log(marcaId)
 
-    // Crear div para el contenido de la marca
-    var contenidoDiv = document.createElement('div');
-    contenidoDiv.setAttribute('id', 'contenido-' + marcaId);
-    contenidoDiv.classList.add('solapa-contenido');
+        var inputRadio = document.createElement('input');
+        inputRadio.setAttribute('type', 'radio');
+        inputRadio.setAttribute('name', 'marca');
+        inputRadio.setAttribute('id', marcaId);
+        if (marcaId === 'renault') {
+            inputRadio.checked = true;
+        }
+        var label = document.createElement('label');
+        label.setAttribute('for', marcaId);
+        label.textContent = marcaId;
 
-    // Crear contenedor de tarjetas para los modelos
-    var contenedorTarjetas = document.createElement('div');
-    contenedorTarjetas.classList.add('contenedor-tarjetas');
+        // Crear div para el contenido de la marca
+        var contenidoDiv = document.createElement('div');
+        contenidoDiv.setAttribute('id', 'contenido-' + marcaId);
+        contenidoDiv.classList.add('solapa-contenido');
 
-    // Iterar sobre los modelos de cada marca
-    marca.modelos.forEach(modelo => {
-      // Crear tarjeta para cada modelo
-      var tarjeta = document.createElement('div');
-      tarjeta.classList.add('tarjeta-auto');
+        // Crear contenedor de tarjetas para los modelos
+        var contenedorTarjetas = document.createElement('div');
+        contenedorTarjetas.classList.add('contenedor-tarjetas');
 
-      var imagen = document.createElement('img');
-      imagen.src = modelo.imagen;
-      imagen.alt = modelo.nombre;
+        data.forEach(vehiculo=>
+            {
+                if(vehiculo.marca.toLowerCase()==marcaId)   {
+                    //se recorre array por cada vehiculo que tiene la marca
+                    console.log(vehiculo)
+                    var tarjeta = document.createElement('div');
+                    tarjeta.classList.add('tarjeta-auto');
 
-      var titulo = document.createElement('h3');
-      titulo.textContent = modelo.nombre;
+                    var imagen = document.createElement('img');
+                    imagen.src = vehiculo.imagen;
+                    imagen.alt = vehiculo.nombre;
 
-      var precio = document.createElement('h4');
-      precio.textContent = 'Desde: ' + modelo.precio;
+                    var titulo = document.createElement('h3');
+                    titulo.textContent = vehiculo.nombre;
 
-      var checkbox = document.createElement('input');
-      checkbox.setAttribute('type', 'checkbox');
-      checkbox.setAttribute('name', 'conocer');
-      checkbox.classList.add('conocer-mas');
+                    var precio = document.createElement('h4');
+                    precio.textContent = 'Desde: ' + vehiculo.precio;
 
-      var labelConocer = document.createElement('label');
-      labelConocer.setAttribute('for', 'conocer');
-      labelConocer.classList.add('conocer');
-      labelConocer.textContent = 'Conocer más';
+                    var checkbox = document.createElement('input');
+                    checkbox.setAttribute('type', 'checkbox');
+                    checkbox.setAttribute('name', 'conocer');
+                    checkbox.classList.add('conocer-mas');
 
-      var descripcion = document.createElement('p');
-      descripcion.classList.add('descripcion');
-      descripcion.textContent = modelo.descripcion;
+                    var labelConocer = document.createElement('label');
+                    labelConocer.setAttribute('for', 'conocer');
+                    labelConocer.classList.add('conocer');
+                    labelConocer.textContent = 'Conocer más';
 
-      // Agregar elementos a la tarjeta
-      tarjeta.appendChild(imagen);
-      tarjeta.appendChild(titulo);
-      tarjeta.appendChild(precio);
-      tarjeta.appendChild(checkbox);
-      tarjeta.appendChild(labelConocer);
-      tarjeta.appendChild(descripcion);
+                    var descripcion = document.createElement('p');
+                    descripcion.classList.add('descripcion');
+                    descripcion.textContent = vehiculo.descripcion;
 
-      // Agregar tarjeta al contenedor
-      contenedorTarjetas.appendChild(tarjeta);
-    });
+                    // Agregar elementos a la tarjeta
+                    tarjeta.appendChild(imagen);
+                    tarjeta.appendChild(titulo);
+                    tarjeta.appendChild(precio);
+                    tarjeta.appendChild(checkbox);
+                    tarjeta.appendChild(labelConocer);
+                    tarjeta.appendChild(descripcion);
 
-    // Agregar contenedor de tarjetas al contenido de la marca
-    contenidoDiv.appendChild(contenedorTarjetas);
+                    // Agregar tarjeta al contenedor
+                    contenedorTarjetas.appendChild(tarjeta);
+                }
+            })
+            
+            // Agregar contenedor de tarjetas al contenido de la marca
+            contenidoDiv.appendChild(contenedorTarjetas);
 
-    // Agregar input radio, label y contenido al contenedor principal
-    solapasDiv.appendChild(inputRadio);
-    solapasDiv.appendChild(label);
-    solapasDiv.appendChild(contenidoDiv);
-  });
+            // Agregar input radio, label y contenido al contenedor principal
+            solapasDiv.appendChild(inputRadio);
+            solapasDiv.appendChild(label);
+            solapasDiv.appendChild(contenidoDiv);
+    })
 }
+
+
 
 
 /* ************************************CRUD************************************ */
-const API_URL = 'data.json';
-let products = [];
-let deleteId = null;
+// const API_URL = 'data.json';
+// let products = [];
+// let deleteId = null;
 
-window.addEventListener('DOMContentLoaded', () => {
-  getProducts();
-})
+// window.addEventListener('DOMContentLoaded', () => {
+//   getProducts();
+// })
 
-const getProducts = () => {
-  fetch(API_URL)
-  .then(response => response.json())
-  .catch(error => {
-    console.error('Ocurrió un problema al cargar los productos:', error);
-  })
-  .then(data => {
-    products = data;
-    renderResult(products);
-  })
-}
+// const getProducts = () => {
+//   fetch(API_URL)
+//   .then(response => response.json())
+//   .catch(error => {
+//     console.error('Ocurrió un problema al cargar los productos:', error);
+//   })
+//   .then(data => {
+//     products = data;
+//     renderResult(products);
+//     console.log(products)
+//   })
+// }
 
-const productsList = document.querySelector('#productsList');
+// const productsList = document.querySelector('#productsList');
 
-const renderResult = (products) => {
-  let listHTML = "";
-  if(Array.isArray(products)){
+// const renderResult = (products) => {
+//   let listHTML = "";
+//   if(Array.isArray(products)){
 
   
-  products.forEach(product => {
-    listHTML += `
-      <div class="card">
-        <div>Nombre: ${product.Nombre}</div>
-        <div>Color: ${product.Color}</div>
-        <div>Precio: ${product.Precio}</div>
-        <div class="options">
-          <button type="button" onclick="editProduct(${product.Id})">Editar</button>
-          <button type="button" onclick="openModalConfirm(${product.Id})">Eliminar</button>
-        </div>
-      </div>
-    `;
-  });
-  productsList.innerHTML = listHTML;
-}
+//   products.forEach(product => {
+//     listHTML += `
+//       <div class="card">
+//         <div>Nombre: ${product.Nombre}</div>
+//         <div>Color: ${product.Color}</div>
+//         <div>Precio: ${product.Precio}</div>
+//         <div class="options">
+//           <button type="button" onclick="editProduct(${product.Id})">Editar</button>
+//           <button type="button" onclick="openModalConfirm(${product.Id})">Eliminar</button>
+//         </div>
+//       </div>
+//     `;
+//   });
+//   productsList.innerHTML = listHTML;
+// }
 
-}
+// }
 
-const createProduct = () => {
-  const formData = new FormData(document.querySelector('#formAdd'));
+// const createProduct = () => {
+//   const formData = new FormData(document.querySelector('#formAdd'));
 
-  if (!formData.get('nombre').length || !formData.get('color') || !formData.get('precio')) {
-    document.querySelector('#msgFormAdd').innerHTML = '* Llena todos los campos';
-    return;
-  }
-  document.querySelector('#msgFormAdd').innerHTML = '';
+//   if (!formData.get('nombre').length || !formData.get('color') || !formData.get('precio')) {
+//     document.querySelector('#msgFormAdd').innerHTML = '* Llena todos los campos';
+//     return;
+//   }
+//   document.querySelector('#msgFormAdd').innerHTML = '';
 
-  const product = {
-    Nombre: formData.get('nombre'),
-    Color: formData.get('color'),
-    Precio: formData.get('precio'),
-  }
+//   const product = {
+//     Nombre: formData.get('nombre'),
+//     Color: formData.get('color'),
+//     Precio: formData.get('precio'),
+//   }
 
-  fetch(API_URL, {
-    method: 'POST',
-    body: JSON.stringify(product),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(res => res.json())
-  .catch(error => {
-    console.error('Error al crear el producto:', error);
-    document.querySelector('#formAdd').reset();
-  })
-  .then(response => {
-    alertManager('success', response.mensaje)
-    getProducts();
-  })
-}
+//   fetch(API_URL, {
+//     method: 'POST',
+//     body: JSON.stringify(product),
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(res => res.json())
+//   .catch(error => {
+//     console.error('Error al crear el producto:', error);
+//     document.querySelector('#formAdd').reset();
+//   })
+//   .then(response => {
+//     alertManager('success', response.mensaje)
+//     getProducts();
+//   })
+// }
 
-const editProduct = (id) => {
-  let product = products.find(prod => prod.Id === id);
+// const editProduct = (id) => {
+//   let product = products.find(prod => prod.Id === id);
 
-  document.querySelector('#formEdit #ID').value = product.Id;
-  document.querySelector('#formEdit #nombre').value = product.Nombre;
-  document.querySelector('#formEdit #color').value = product.Color;
-  document.querySelector('#formEdit #precio').value = product.Precio;
+//   document.querySelector('#formEdit #ID').value = product.Id;
+//   document.querySelector('#formEdit #nombre').value = product.Nombre;
+//   document.querySelector('#formEdit #color').value = product.Color;
+//   document.querySelector('#formEdit #precio').value = product.Precio;
 
-  openModalEdit();
-}
+//   openModalEdit();
+// }
 
-const updateProduct = () => {
-  const product = {
-    Nombre: document.querySelector('#formEdit #nombre').value,
-    Color: document.querySelector('#formEdit #color').value,
-    Precio: document.querySelector('#formEdit #precio').value,
-    Id: document.querySelector('#formEdit #ID').value,
-  }
+// const updateProduct = () => {
+//   const product = {
+//     Nombre: document.querySelector('#formEdit #nombre').value,
+//     Color: document.querySelector('#formEdit #color').value,
+//     Precio: document.querySelector('#formEdit #precio').value,
+//     Id: document.querySelector('#formEdit #ID').value,
+//   }
 
-  if (!product.Nombre || !product.Color || !product.Precio) {
-    document.querySelector('#msgFormEdit').innerHTML = '* Los campos no deben estar vacíos';
-    return;
-  }
-  document.querySelector('#msgFormEdit').innerHTML = '';
+//   if (!product.Nombre || !product.Color || !product.Precio) {
+//     document.querySelector('#msgFormEdit').innerHTML = '* Los campos no deben estar vacíos';
+//     return;
+//   }
+//   document.querySelector('#msgFormEdit').innerHTML = '';
 
-  fetch(API_URL, {
-    method: 'PUT',
-    body: JSON.stringify(product),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(res => res.json())
-  .catch(error => {
-    console.error('Error al actualizar el producto:', error);
-    document.querySelector('#formEdit').reset();
-  })
-  .then(response => {
-    alertManager('success', response.mensaje)
-    closeModalEdit();
-    getProducts();
-  })
-}
+//   fetch(API_URL, {
+//     method: 'PUT',
+//     body: JSON.stringify(product),
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(res => res.json())
+//   .catch(error => {
+//     console.error('Error al actualizar el producto:', error);
+//     document.querySelector('#formEdit').reset();
+//   })
+//   .then(response => {
+//     alertManager('success', response.mensaje)
+//     closeModalEdit();
+//     getProducts();
+//   })
+// }
 
-const openModalConfirm = (id) => {
-  deleteId = id;
-  document.querySelector('#modalConfirm').style.display = 'block';
-}
+// const openModalConfirm = (id) => {
+//   deleteId = id;
+//   document.querySelector('#modalConfirm').style.display = 'block';
+// }
 
-const closeModalConfirm = () => {
-  deleteId = null;
-  document.querySelector('#modalConfirm').style.display = 'none';
-}
+// const closeModalConfirm = () => {
+//   deleteId = null;
+//   document.querySelector('#modalConfirm').style.display = 'none';
+// }
 
-const confirmDelete = (deleteProduct) => {
-  if (!deleteProduct) {
-    closeModalConfirm();
-    return;
-  }
+// const confirmDelete = (deleteProduct) => {
+//   if (!deleteProduct) {
+//     closeModalConfirm();
+//     return;
+//   }
 
-  fetch(`${API_URL}/${deleteId}`, {
-    method: 'DELETE'
-  })
-  .then(res => res.json())
-  .catch(error => {
-    console.error('Error al eliminar el producto:', error);
-  })
-  .then(response => {
-    alertManager('success', response.mensaje)
-    closeModalConfirm();
-    getProducts();
-  })
-}
+//   fetch(`${API_URL}/${deleteId}`, {
+//     method: 'DELETE'
+//   })
+//   .then(res => res.json())
+//   .catch(error => {
+//     console.error('Error al eliminar el producto:', error);
+//   })
+//   .then(response => {
+//     alertManager('success', response.mensaje)
+//     closeModalConfirm();
+//     getProducts();
+//   })
+// }
 
-const alertManager = (type, message) => {
-  const alertElement = document.querySelector('#alert');
-  alertElement.textContent = message;
-  alertElement.className = `alert ${type}`;
-  alertElement.style.display = 'block';
+// const alertManager = (type, message) => {
+//   const alertElement = document.querySelector('#alert');
+//   alertElement.textContent = message;
+//   alertElement.className = `alert ${type}`;
+//   alertElement.style.display = 'block';
 
-  setTimeout(() => {
-    alertElement.style.display = 'none';
-  }, 3000);
-}
+//   setTimeout(() => {
+//     alertElement.style.display = 'none';
+//   }, 3000);
+// }
 
-const closeModalAdd = () => {
-  document.querySelector('#formAdd').reset();
-  document.querySelector('#msgFormAdd').innerHTML = '';
-  document.querySelector('#modalAdd').style.display = 'none';
-}
+// const closeModalAdd = () => {
+//   document.querySelector('#formAdd').reset();
+//   document.querySelector('#msgFormAdd').innerHTML = '';
+//   document.querySelector('#modalAdd').style.display = 'none';
+// }
 
-const closeModalEdit = () => {
-  document.querySelector('#formEdit').reset();
-  document.querySelector('#msgFormEdit').innerHTML = '';
-  document.querySelector('#modalEdit').style.display = 'none';
-}
+// const closeModalEdit = () => {
+//   document.querySelector('#formEdit').reset();
+//   document.querySelector('#msgFormEdit').innerHTML = '';
+//   document.querySelector('#modalEdit').style.display = 'none';
+// }
 
-document.querySelector('#btnAdd').addEventListener('click', () => {
-  document.querySelector('#modalAdd').style.display = 'block';
-});
+// document.querySelector('#btnAdd').addEventListener('click', () => {
+//   document.querySelector('#modalAdd').style.display = 'block';
+// });
