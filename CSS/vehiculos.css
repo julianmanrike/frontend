@@ -261,6 +261,9 @@ input[type="radio"]:checked + label + .solapa-contenido{
    transition: all 0.5s ease;
  }
  
+ .visualizar{
+  display:none;
+ }
  
  
  @media screen and (max-width: 780px){

@@ -69,8 +69,8 @@ function mostrarInfo(data){
 
                     tarjeta.innerHTML += `
                         <p class="idVehiculo">${vehiculo.id}</p>
-                        <button class="botonBorrar"onclick="openModalConfirm(${vehiculo.id})">borrar</button>
-                        <button class="botonEditar" onclick="editProduct(${vehiculo.id})" >editar</button>
+                        <button class="botonBorrar visualizar"onclick="openModalConfirm(${vehiculo.id})">borrar</button>
+                        <button class="botonEditar visualizar" onclick="editProduct(${vehiculo.id})" >editar</button>
                         <img src="${vehiculo.imagen}" alt="${vehiculo.nombre}">
                         <h3>${vehiculo.nombre}</h3>    
                         <h4>Desde: $${vehiculo.precio} </h4>

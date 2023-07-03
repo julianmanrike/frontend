@@ -657,3 +657,8 @@ header nav>*:hover {
     height: 60%;
   }
 }
+
+
+#navLogout{
+  display: none;
+}

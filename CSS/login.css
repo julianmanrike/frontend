@@ -1,0 +1,57 @@
+main{
+    background-image: url(img/trekk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+#contenedorForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    margin-bottom: 1em;
+}
+
+#formData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    
+}
+
+#formData input{
+    padding: 1em;
+    background-color: rgba(121, 73, 170, 0.303);
+    width: 100%;
+}
+
+.ingresar, .abandonar{
+    margin-top: 1em;
+    background-color: rgb(54, 54, 196);
+}
+
+
+
+.cancelarLogin, .cancelarLogout{
+    background-color: rgb(213, 56, 56);
+}
+
+#formData button{
+    width: 100%;
+    padding: 1em;
+}
+
+#formLogin{
+    border-radius: 50px 0 50px 0;
+    background-color: rgba(198, 174, 221, 0.52);
+    width: 400px;
+    padding: 4em;
+
+}
