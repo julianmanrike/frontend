@@ -263,6 +263,12 @@ input[type="radio"]:checked + label + .solapa-contenido{
  
  .visualizar{
   display:none;
+  padding: 0.5em;
+  border-radius: 10px;
+ }
+
+ .idVehiculo{
+  display: none;
  }
  
  
@@ -274,6 +280,7 @@ input[type="radio"]:checked + label + .solapa-contenido{
    #vehiculos-marca{
      min-height: 160vh;
      margin-bottom: 50px;
+     background-color: transparent;
    }
  
  

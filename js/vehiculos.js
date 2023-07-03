@@ -74,8 +74,10 @@ function mostrarInfo(data){
                         <img src="${vehiculo.imagen}" alt="${vehiculo.nombre}">
                         <h3>${vehiculo.nombre}</h3>    
                         <h4>Desde: $${vehiculo.precio} </h4>
+                        
                         <input type="checkbox" name="conocer" class="conocer-mas">
                         <label for="conocer" class="conocer">Conocer más</label>
+                        <p class="descripcion">${vehiculo.descripcion}</p>
                     `
                     // Agregar tarjeta al contenedor
                     contenedorTarjetas.appendChild(tarjeta);

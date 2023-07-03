@@ -33,9 +33,9 @@
                 </div>
                 <a href="sucursales.html">Concesionarios</a>
                 <a href="contacto.html">Contacto</a>
-                <a href="nosotros.html">Acerca de</a>
                 <a id="navLogin" href="login.html">Login</a>
                 <a id="navLogout" href="logout.html">Logout</a>
+                <a href="nosotros.html">Acerca de</a>
             </nav>
         </div>
     </header>
@@ -71,8 +71,8 @@
                 </form>
             </div>
             <div class="form-footer">
-                <button type="button" onclick="closeModalAdd()">Cancelar</button>
-                <button type="button" onclick="agregarVehiculo()">Guardar</button>
+                <button type="button" onclick="closeModalAdd()" class="visualizar">Cancelar</button>
+                <button type="button" onclick="agregarVehiculo()" class="visualizar">Guardar</button>
             </div>
             <span id="msgFormAdd" class="msg-error"></span>
         </div>
@@ -107,8 +107,8 @@
                 </form>
             </div>
             <div class="form-footer">
-                <button type="button" onclick="closeModalEdit()">Cancelar</button>
-                <button type="button" onclick="updateProduct()">Guardar cambios</button>
+                <button type="button" onclick="closeModalEdit()" class="visualizar">Cancelar</button>
+                <button type="button" onclick="updateProduct()" class="visualizar">Guardar cambios</button>
             </div>
             <span id="msgFormEdit" class="msg-error"></span>
         </div>
@@ -122,8 +122,8 @@
                 <p>¿Estas seguro de eliminar el producto?</p>
             </div>
             <div class="form-footer">
-                <button type="button" onclick="confirmDelete(false)">No</button>
-                <button type="button" onclick="confirmDelete(true)">Si</button>
+                <button type="button" onclick="confirmDelete(false)" class="visualizar">No</button>
+                <button type="button" onclick="confirmDelete(true)" class="visualizar">Si</button>
             </div>
         </div>
     </div>
